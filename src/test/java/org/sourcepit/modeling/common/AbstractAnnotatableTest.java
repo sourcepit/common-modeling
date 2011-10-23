@@ -78,6 +78,62 @@ public abstract class AbstractAnnotatableTest
       }
       assertThat(count, IsNot.not(0));
    }
+   
+   @Test
+   public void testGetAnnotationAndCreateOnDemand() throws Exception
+   {
+      int count = 0;
+
+      List<EClass> annotateableTypes = getAnnotateableTypes();
+      for (EClass eClass : annotateableTypes)
+      {
+         count++;
+
+         Annotatable annotateable = createAnnotateable(eClass);
+         try
+         {
+            annotateable.getAnnotation(null, true);
+            fail("Must throw IllegalArgumentException");
+         }
+         catch (IllegalArgumentException e)
+         {
+         }
+         catch (UnsupportedOperationException e)
+         {
+            fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
+         }
+
+         assertNull(annotateable.getAnnotation("foo", false));
+         assertNotNull(annotateable.getAnnotation("foo", true));
+
+         Annotation a = CommonModelFactory.eINSTANCE.createAnnotation();
+         a.setSource(annotateable.getClass().getName());
+
+         annotateable.getAnnotations().add(a);
+
+         Annotation aa = annotateable.getAnnotation(annotateable.getClass().getName(), true);
+         assertNotNull(aa);
+         assertSame(a, aa);
+
+         Annotation aaa = CommonModelFactory.eINSTANCE.createAnnotation();
+         aaa.setSource(annotateable.getClass().getName() + "2");
+
+         annotateable.getAnnotations().add(aaa);
+
+         aa = annotateable.getAnnotation(annotateable.getClass().getName(), true);
+         assertNotNull(aa);
+         assertSame(a, aa);
+         assertNotSame(aa, aaa);
+
+         Annotation aaaa = annotateable.getAnnotation(annotateable.getClass().getName() + "2");
+         assertNotNull(aaaa);
+         assertSame(aaa, aaaa);
+         assertNotSame(aa, aaaa);
+
+         assertNotNull(annotateable.getAnnotation("foo", false));
+      }
+      assertThat(count, IsNot.not(0));
+   }
 
    private Annotatable createAnnotateable(EClass eClass)
    {
