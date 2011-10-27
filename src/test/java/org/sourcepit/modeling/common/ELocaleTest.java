@@ -6,12 +6,14 @@
 
 package org.sourcepit.modeling.common;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import java.util.Locale;
 
 import org.eclipse.emf.ecore.EDataType;
 import org.junit.Test;
+
 /**
  * @author Bernd
  */

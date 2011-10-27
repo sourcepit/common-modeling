@@ -15,7 +15,11 @@ public abstract aspect CommonModelOperationsPCDs
 
    pointcut getAnnotationData(Annotatable a, String source, String key): target(a) && args(source, key) && execution(String getAnnotationData(String, String));
 
-   pointcut getData(Annotation a, String key, boolean defaultValue): target(a) && args(key, defaultValue) && execution(boolean getData(String, boolean));
+   pointcut getStringData(Annotation a, String key, String defaultValue): target(a) && args(key, defaultValue) && execution(String getData(String, String));
 
-   pointcut setData(Annotation a, String key, boolean value): target(a) && args(key, value) && execution(void setData(String, boolean));
+   pointcut setStringData(Annotation a, String key, String value): target(a) && args(key, value) && execution(void setData(String, String));
+
+   pointcut getBooleanData(Annotation a, String key, boolean defaultValue): target(a) && args(key, defaultValue) && execution(boolean getData(String, boolean));
+
+   pointcut setBooleanData(Annotation a, String key, boolean value): target(a) && args(key, value) && execution(void setData(String, boolean));
 }

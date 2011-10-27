@@ -1,32 +1,31 @@
 /**
  * <copyright>
  * </copyright>
- *
+ * 
  * $Id$
  */
+
 package org.sourcepit.modeling.common.impl;
 
 import java.io.File;
-
 import java.util.Locale;
-
 import java.util.Map.Entry;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.sourcepit.modeling.common.*;
+import org.sourcepit.modeling.common.Annotation;
+import org.sourcepit.modeling.common.CommonModelFactory;
+import org.sourcepit.modeling.common.CommonModelPackage;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelFactory
@@ -35,13 +34,15 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
     * Creates the default factory implementation.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public static CommonModelFactory init()
    {
       try
       {
-         CommonModelFactory theCommonModelFactory = (CommonModelFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.sourcepit.org/modeling/common/0.1"); 
+         CommonModelFactory theCommonModelFactory = (CommonModelFactory) EPackage.Registry.INSTANCE
+            .getEFactory("http://www.sourcepit.org/modeling/common/0.1");
          if (theCommonModelFactory != null)
          {
             return theCommonModelFactory;
@@ -58,6 +59,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
     * Creates an instance of the factory.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public CommonModelFactoryImpl()
@@ -68,6 +70,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    @Override
@@ -75,11 +78,15 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    {
       switch (eClass.getClassifierID())
       {
-         case CommonModelPackage.ANNOTATION: return createAnnotation();
-         case CommonModelPackage.ESTRING_MAP_ENTRY: return (EObject)createEStringMapEntry();
-         case CommonModelPackage.ECONTAINMENT_MAP_ENTRY: return (EObject)createEContainmentMapEntry();
-         case CommonModelPackage.EREFERENCE_MAP_ENTRY: return (EObject)createEReferenceMapEntry();
-         default:
+         case CommonModelPackage.ANNOTATION :
+            return createAnnotation();
+         case CommonModelPackage.ESTRING_MAP_ENTRY :
+            return (EObject) createEStringMapEntry();
+         case CommonModelPackage.ECONTAINMENT_MAP_ENTRY :
+            return (EObject) createEContainmentMapEntry();
+         case CommonModelPackage.EREFERENCE_MAP_ENTRY :
+            return (EObject) createEReferenceMapEntry();
+         default :
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
       }
    }
@@ -87,6 +94,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    @Override
@@ -94,11 +102,11 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    {
       switch (eDataType.getClassifierID())
       {
-         case CommonModelPackage.EJAVA_FILE:
+         case CommonModelPackage.EJAVA_FILE :
             return createEJavaFileFromString(eDataType, initialValue);
-         case CommonModelPackage.ELOCALE:
+         case CommonModelPackage.ELOCALE :
             return createELocaleFromString(eDataType, initialValue);
-         default:
+         default :
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
       }
    }
@@ -106,6 +114,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    @Override
@@ -113,11 +122,11 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    {
       switch (eDataType.getClassifierID())
       {
-         case CommonModelPackage.EJAVA_FILE:
+         case CommonModelPackage.EJAVA_FILE :
             return convertEJavaFileToString(eDataType, instanceValue);
-         case CommonModelPackage.ELOCALE:
+         case CommonModelPackage.ELOCALE :
             return convertELocaleToString(eDataType, instanceValue);
-         default:
+         default :
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
       }
    }
@@ -125,6 +134,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public Annotation createAnnotation()
@@ -136,6 +146,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public Entry<String, String> createEStringMapEntry()
@@ -147,6 +158,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public Entry<String, EObject> createEContainmentMapEntry()
@@ -158,6 +170,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public Entry<String, EObject> createEReferenceMapEntry()
@@ -169,16 +182,18 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public File createEJavaFileFromString(EDataType eDataType, String initialValue)
    {
-      return (File)super.createFromString(eDataType, initialValue);
+      return (File) super.createFromString(eDataType, initialValue);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public String convertEJavaFileToString(EDataType eDataType, Object instanceValue)
@@ -189,16 +204,18 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public Locale createELocaleFromString(EDataType eDataType, String initialValue)
    {
-      return (Locale)super.createFromString(eDataType, initialValue);
+      return (Locale) super.createFromString(eDataType, initialValue);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public String convertELocaleToString(EDataType eDataType, Object instanceValue)
@@ -209,16 +226,18 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public CommonModelPackage getCommonModelPackage()
    {
-      return (CommonModelPackage)getEPackage();
+      return (CommonModelPackage) getEPackage();
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @deprecated
     * @generated
     */
@@ -228,4 +247,4 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
       return CommonModelPackage.eINSTANCE;
    }
 
-} //CommonModelFactoryImpl
+} // CommonModelFactoryImpl

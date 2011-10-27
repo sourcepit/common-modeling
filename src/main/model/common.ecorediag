@@ -40,6 +40,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_eVHOg_1qEeCtzcTtnLyYnw"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_eVHOhP1qEeCtzcTtnLyYnw" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_LdqiUADWEeGTnObzq5aFlg" type="2002">
+        <element xmi:type="ecore:EOperation" href="common.ecore#//Annotation/getData.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LdqiUQDWEeGTnObzq5aFlg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_MfKbkADWEeGTnObzq5aFlg" type="2002">
+        <element xmi:type="ecore:EOperation" href="common.ecore#//Annotation/setData.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MfKbkQDWEeGTnObzq5aFlg"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_0qwv8P1sEeCtzcTtnLyYnw" type="2002">
         <element xmi:type="ecore:EOperation" href="common.ecore#//Annotation/getData"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_0qwv8f1sEeCtzcTtnLyYnw"/>

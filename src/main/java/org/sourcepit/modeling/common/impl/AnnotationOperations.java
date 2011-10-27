@@ -15,6 +15,21 @@ public final class AnnotationOperations
       super();
    }
 
+   public static String getData(Annotation annotation, String key, String defaultValue)
+   {
+      final String value = annotation.getData().get(key);
+      if (value != null)
+      {
+         return value;
+      }
+      return defaultValue;
+   }
+
+   public static void setData(Annotation annotation, String key, String value)
+   {
+      annotation.getData().put(key, value);
+   }
+
    public static boolean getData(Annotation annotation, String key, boolean defaultValue)
    {
       final String value = annotation.getData().get(key);

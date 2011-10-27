@@ -1,15 +1,14 @@
 /**
  * <copyright>
  * </copyright>
- *
+ * 
  * $Id$
  */
+
 package org.sourcepit.modeling.common.impl;
 
 import java.io.File;
-
 import java.util.Locale;
-
 import java.util.Map.Entry;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -18,9 +17,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.sourcepit.modeling.common.Annotatable;
 import org.sourcepit.modeling.common.Annotation;
 import org.sourcepit.modeling.common.CommonModelFactory;
@@ -30,6 +27,7 @@ import org.sourcepit.modeling.common.CommonModelPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class CommonModelPackageImpl extends EPackageImpl implements CommonModelPackage
@@ -37,6 +35,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EClass annotatableEClass = null;
@@ -44,6 +43,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EClass annotationEClass = null;
@@ -51,6 +51,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EClass eStringMapEntryEClass = null;
@@ -58,6 +59,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EClass eContainmentMapEntryEClass = null;
@@ -65,6 +67,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EClass eReferenceMapEntryEClass = null;
@@ -72,6 +75,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EDataType eJavaFileEDataType = null;
@@ -79,20 +83,20 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private EDataType eLocaleEDataType = null;
 
    /**
-    * Creates an instance of the model <b>Package</b>, registered with
-    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+    * Creates an instance of the model <b>Package</b>, registered with {@link org.eclipse.emf.ecore.EPackage.Registry
+    * EPackage.Registry} by the package
     * package URI value.
-    * <p>Note: the correct way to create the package is via the static
-    * factory method {@link #init init()}, which also performs
-    * initialization of the package, or returns the registered package,
-    * if one already exists.
-    * <!-- begin-user-doc -->
-    * <!-- end-user-doc -->
+    * <p>
+    * Note: the correct way to create the package is via the static factory method {@link #init init()}, which also
+    * performs initialization of the package, or returns the registered package, if one already exists. <!--
+    * begin-user-doc --> <!-- end-user-doc -->
+    * 
     * @see org.eclipse.emf.ecore.EPackage.Registry
     * @see org.sourcepit.modeling.common.CommonModelPackage#eNS_URI
     * @see #init()
@@ -106,6 +110,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private static boolean isInited = false;
@@ -113,10 +118,11 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
     * 
-    * <p>This method is used to initialize {@link CommonModelPackage#eINSTANCE} when that field is accessed.
-    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-    * <!-- begin-user-doc -->
-    * <!-- end-user-doc -->
+    * <p>
+    * This method is used to initialize {@link CommonModelPackage#eINSTANCE} when that field is accessed. Clients should
+    * not invoke it directly. Instead, they should simply access that field to obtain the package. <!-- begin-user-doc
+    * --> <!-- end-user-doc -->
+    * 
     * @see #eNS_URI
     * @see #createPackageContents()
     * @see #initializePackageContents()
@@ -124,10 +130,13 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     */
    public static CommonModelPackage init()
    {
-      if (isInited) return (CommonModelPackage)EPackage.Registry.INSTANCE.getEPackage(CommonModelPackage.eNS_URI);
+      if (isInited)
+         return (CommonModelPackage) EPackage.Registry.INSTANCE.getEPackage(CommonModelPackage.eNS_URI);
 
       // Obtain or create and register package
-      CommonModelPackageImpl theCommonModelPackage = (CommonModelPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CommonModelPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CommonModelPackageImpl());
+      CommonModelPackageImpl theCommonModelPackage = (CommonModelPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CommonModelPackageImpl
+         ? EPackage.Registry.INSTANCE.get(eNS_URI)
+         : new CommonModelPackageImpl());
 
       isInited = true;
 
@@ -140,7 +149,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       // Mark meta-data to indicate it can't be changed
       theCommonModelPackage.freeze();
 
-  
+
       // Update the registry and return the package
       EPackage.Registry.INSTANCE.put(CommonModelPackage.eNS_URI, theCommonModelPackage);
       return theCommonModelPackage;
@@ -149,6 +158,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EClass getAnnotatable()
@@ -159,16 +169,18 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getAnnotatable_Annotations()
    {
-      return (EReference)annotatableEClass.getEStructuralFeatures().get(0);
+      return (EReference) annotatableEClass.getEStructuralFeatures().get(0);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EClass getAnnotation()
@@ -179,56 +191,62 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getAnnotation_Target()
    {
-      return (EReference)annotationEClass.getEStructuralFeatures().get(0);
+      return (EReference) annotationEClass.getEStructuralFeatures().get(0);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EAttribute getAnnotation_Source()
    {
-      return (EAttribute)annotationEClass.getEStructuralFeatures().get(1);
+      return (EAttribute) annotationEClass.getEStructuralFeatures().get(1);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getAnnotation_Data()
    {
-      return (EReference)annotationEClass.getEStructuralFeatures().get(2);
+      return (EReference) annotationEClass.getEStructuralFeatures().get(2);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getAnnotation_Contents()
    {
-      return (EReference)annotationEClass.getEStructuralFeatures().get(3);
+      return (EReference) annotationEClass.getEStructuralFeatures().get(3);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getAnnotation_References()
    {
-      return (EReference)annotationEClass.getEStructuralFeatures().get(4);
+      return (EReference) annotationEClass.getEStructuralFeatures().get(4);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EClass getEStringMapEntry()
@@ -239,26 +257,29 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EAttribute getEStringMapEntry_Key()
    {
-      return (EAttribute)eStringMapEntryEClass.getEStructuralFeatures().get(0);
+      return (EAttribute) eStringMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EAttribute getEStringMapEntry_Value()
    {
-      return (EAttribute)eStringMapEntryEClass.getEStructuralFeatures().get(1);
+      return (EAttribute) eStringMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EClass getEContainmentMapEntry()
@@ -269,26 +290,29 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EAttribute getEContainmentMapEntry_Key()
    {
-      return (EAttribute)eContainmentMapEntryEClass.getEStructuralFeatures().get(0);
+      return (EAttribute) eContainmentMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getEContainmentMapEntry_Value()
    {
-      return (EReference)eContainmentMapEntryEClass.getEStructuralFeatures().get(1);
+      return (EReference) eContainmentMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EClass getEReferenceMapEntry()
@@ -299,26 +323,29 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EAttribute getEReferenceMapEntry_Key()
    {
-      return (EAttribute)eReferenceMapEntryEClass.getEStructuralFeatures().get(0);
+      return (EAttribute) eReferenceMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EReference getEReferenceMapEntry_Value()
    {
-      return (EReference)eReferenceMapEntryEClass.getEStructuralFeatures().get(1);
+      return (EReference) eReferenceMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EDataType getEJavaFile()
@@ -329,6 +356,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public EDataType getELocale()
@@ -339,30 +367,34 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public CommonModelFactory getCommonModelFactory()
    {
-      return (CommonModelFactory)getEFactoryInstance();
+      return (CommonModelFactory) getEFactoryInstance();
    }
 
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private boolean isCreated = false;
 
    /**
-    * Creates the meta-model objects for the package.  This method is
+    * Creates the meta-model objects for the package. This method is
     * guarded to have no affect on any invocation but its first.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public void createPackageContents()
    {
-      if (isCreated) return;
+      if (isCreated)
+         return;
       isCreated = true;
 
       // Create classes and their features
@@ -396,20 +428,23 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    private boolean isInitialized = false;
 
    /**
-    * Complete the initialization of the package and its meta-model.  This
+    * Complete the initialization of the package and its meta-model. This
     * method is guarded to have no affect on any invocation but its first.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public void initializePackageContents()
    {
-      if (isInitialized) return;
+      if (isInitialized)
+         return;
       isInitialized = true;
 
       // Initialize package
@@ -425,10 +460,14 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       annotationEClass.getESuperTypes().add(this.getAnnotatable());
 
       // Initialize classes and features; add operations and parameters
-      initEClass(annotatableEClass, Annotatable.class, "Annotatable", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-      initEReference(getAnnotatable_Annotations(), this.getAnnotation(), this.getAnnotation_Target(), "annotations", null, 0, -1, Annotatable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEClass(annotatableEClass, Annotatable.class, "Annotatable", IS_ABSTRACT, IS_INTERFACE,
+         IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getAnnotatable_Annotations(), this.getAnnotation(), this.getAnnotation_Target(), "annotations",
+         null, 0, -1, Annotatable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-      EOperation op = addEOperation(annotatableEClass, this.getAnnotation(), "getAnnotation", 0, 1, IS_UNIQUE, IS_ORDERED);
+      EOperation op = addEOperation(annotatableEClass, this.getAnnotation(), "getAnnotation", 0, 1, IS_UNIQUE,
+         IS_ORDERED);
       addEParameter(op, ecorePackage.getEString(), "source", 0, 1, IS_UNIQUE, IS_ORDERED);
 
       op = addEOperation(annotatableEClass, this.getAnnotation(), "getAnnotation", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -439,12 +478,22 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       addEParameter(op, ecorePackage.getEString(), "source", 0, 1, IS_UNIQUE, IS_ORDERED);
       addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-      initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-      initEReference(getAnnotation_Target(), this.getAnnotatable(), this.getAnnotatable_Annotations(), "target", null, 1, 1, Annotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEAttribute(getAnnotation_Source(), ecorePackage.getEString(), "source", null, 1, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEReference(getAnnotation_Data(), this.getEStringMapEntry(), null, "data", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEReference(getAnnotation_Contents(), this.getEContainmentMapEntry(), null, "contents", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEReference(getAnnotation_References(), this.getEReferenceMapEntry(), null, "references", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE,
+         IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getAnnotation_Target(), this.getAnnotatable(), this.getAnnotatable_Annotations(), "target", null,
+         1, 1, Annotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getAnnotation_Source(), ecorePackage.getEString(), "source", null, 1, 1, Annotation.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getAnnotation_Data(), this.getEStringMapEntry(), null, "data", null, 0, -1, Annotation.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+         !IS_DERIVED, IS_ORDERED);
+      initEReference(getAnnotation_Contents(), this.getEContainmentMapEntry(), null, "contents", null, 0, -1,
+         Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getAnnotation_References(), this.getEReferenceMapEntry(), null, "references", null, 0, -1,
+         Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
       op = addEOperation(annotationEClass, ecorePackage.getEBoolean(), "getData", 0, 1, IS_UNIQUE, IS_ORDERED);
       addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -454,17 +503,36 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
       addEParameter(op, ecorePackage.getEBoolean(), "value", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-      initEClass(eStringMapEntryEClass, Entry.class, "EStringMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-      initEAttribute(getEStringMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEAttribute(getEStringMapEntry_Value(), ecorePackage.getEString(), "value", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      op = addEOperation(annotationEClass, ecorePackage.getEString(), "getData", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "defaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-      initEClass(eContainmentMapEntryEClass, Entry.class, "EContainmentMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-      initEAttribute(getEContainmentMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEReference(getEContainmentMapEntry_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      op = addEOperation(annotationEClass, null, "setData", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "defaultValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-      initEClass(eReferenceMapEntryEClass, Entry.class, "EReferenceMapEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-      initEAttribute(getEReferenceMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-      initEReference(getEReferenceMapEntry_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEClass(eStringMapEntryEClass, Entry.class, "EStringMapEntry", !IS_ABSTRACT, !IS_INTERFACE,
+         !IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getEStringMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEAttribute(getEStringMapEntry_Value(), ecorePackage.getEString(), "value", null, 0, 1, Entry.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(eContainmentMapEntryEClass, Entry.class, "EContainmentMapEntry", !IS_ABSTRACT, !IS_INTERFACE,
+         !IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getEContainmentMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getEContainmentMapEntry_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1,
+         Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      initEClass(eReferenceMapEntryEClass, Entry.class, "EReferenceMapEntry", !IS_ABSTRACT, !IS_INTERFACE,
+         !IS_GENERATED_INSTANCE_CLASS);
+      initEAttribute(getEReferenceMapEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Entry.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getEReferenceMapEntry_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Entry.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+         !IS_DERIVED, IS_ORDERED);
 
       // Initialize data types
       initEDataType(eJavaFileEDataType, File.class, "EJavaFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -474,4 +542,4 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       createResource(eNS_URI);
    }
 
-} //CommonModelPackageImpl
+} // CommonModelPackageImpl

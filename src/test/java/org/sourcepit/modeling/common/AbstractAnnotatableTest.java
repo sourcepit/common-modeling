@@ -6,7 +6,14 @@
 
 package org.sourcepit.modeling.common;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +85,7 @@ public abstract class AbstractAnnotatableTest
       }
       assertThat(count, IsNot.not(0));
    }
-   
+
    @Test
    public void testGetAnnotationAndCreateOnDemand() throws Exception
    {
@@ -146,12 +153,12 @@ public abstract class AbstractAnnotatableTest
    public void testGetAnnotationData() throws Exception
    {
       int count = 0;
-      
+
       List<EClass> annotateableTypes = getAnnotateableTypes();
       for (EClass eClass : annotateableTypes)
       {
          count++;
-         
+
          Annotatable annotateable = createAnnotateable(eClass);
          try
          {

@@ -1,27 +1,28 @@
 /**
  * <copyright>
  * </copyright>
- *
+ * 
  * $Id$
  */
+
 package org.sourcepit.modeling.common.util;
 
 import java.util.Map.Entry;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.sourcepit.modeling.common.*;
+import org.sourcepit.modeling.common.Annotatable;
+import org.sourcepit.modeling.common.Annotation;
+import org.sourcepit.modeling.common.CommonModelPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
+ * 
  * @see org.sourcepit.modeling.common.CommonModelPackage
  * @generated
  */
@@ -31,6 +32,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * The cached model package.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    protected static CommonModelPackage modelPackage;
@@ -39,6 +41,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * Creates an instance of the adapter factory.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
    public CommonModelAdapterFactory()
@@ -52,8 +55,10 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
    /**
     * Returns whether this factory is applicable for the type of the object.
     * <!-- begin-user-doc -->
-    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object
+    * of the model.
     * <!-- end-user-doc -->
+    * 
     * @return whether this factory is applicable for the type of the object.
     * @generated
     */
@@ -66,7 +71,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
       }
       if (object instanceof EObject)
       {
-         return ((EObject)object).eClass().getEPackage() == modelPackage;
+         return ((EObject) object).eClass().getEPackage() == modelPackage;
       }
       return false;
    }
@@ -75,47 +80,53 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * The switch that delegates to the <code>createXXX</code> methods.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @generated
     */
-   protected CommonModelSwitch<Adapter> modelSwitch =
-      new CommonModelSwitch<Adapter>()
+   protected CommonModelSwitch<Adapter> modelSwitch = new CommonModelSwitch<Adapter>()
+   {
+      @Override
+      public Adapter caseAnnotatable(Annotatable object)
       {
-         @Override
-         public Adapter caseAnnotatable(Annotatable object)
-         {
-            return createAnnotatableAdapter();
-         }
-         @Override
-         public Adapter caseAnnotation(Annotation object)
-         {
-            return createAnnotationAdapter();
-         }
-         @Override
-         public Adapter caseEStringMapEntry(Entry<String, String> object)
-         {
-            return createEStringMapEntryAdapter();
-         }
-         @Override
-         public Adapter caseEContainmentMapEntry(Entry<String, EObject> object)
-         {
-            return createEContainmentMapEntryAdapter();
-         }
-         @Override
-         public Adapter caseEReferenceMapEntry(Entry<String, EObject> object)
-         {
-            return createEReferenceMapEntryAdapter();
-         }
-         @Override
-         public Adapter defaultCase(EObject object)
-         {
-            return createEObjectAdapter();
-         }
-      };
+         return createAnnotatableAdapter();
+      }
+
+      @Override
+      public Adapter caseAnnotation(Annotation object)
+      {
+         return createAnnotationAdapter();
+      }
+
+      @Override
+      public Adapter caseEStringMapEntry(Entry<String, String> object)
+      {
+         return createEStringMapEntryAdapter();
+      }
+
+      @Override
+      public Adapter caseEContainmentMapEntry(Entry<String, EObject> object)
+      {
+         return createEContainmentMapEntryAdapter();
+      }
+
+      @Override
+      public Adapter caseEReferenceMapEntry(Entry<String, EObject> object)
+      {
+         return createEReferenceMapEntryAdapter();
+      }
+
+      @Override
+      public Adapter defaultCase(EObject object)
+      {
+         return createEObjectAdapter();
+      }
+   };
 
    /**
     * Creates an adapter for the <code>target</code>.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
+    * 
     * @param target the object to adapt.
     * @return the adapter for the <code>target</code>.
     * @generated
@@ -123,16 +134,18 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
    @Override
    public Adapter createAdapter(Notifier target)
    {
-      return modelSwitch.doSwitch((EObject)target);
+      return modelSwitch.doSwitch((EObject) target);
    }
 
 
    /**
-    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.Annotatable <em>Annotatable</em>}'.
+    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.Annotatable
+    * <em>Annotatable</em>}'.
     * <!-- begin-user-doc -->
     * This default implementation returns null so that we can easily ignore cases;
     * it's useful to ignore a case when inheritance will catch all the cases anyway.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @see org.sourcepit.modeling.common.Annotatable
     * @generated
@@ -143,11 +156,13 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
    }
 
    /**
-    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.Annotation <em>Annotation</em>}'.
+    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.Annotation <em>Annotation</em>}
+    * '.
     * <!-- begin-user-doc -->
     * This default implementation returns null so that we can easily ignore cases;
     * it's useful to ignore a case when inheritance will catch all the cases anyway.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @see org.sourcepit.modeling.common.Annotation
     * @generated
@@ -163,6 +178,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * This default implementation returns null so that we can easily ignore cases;
     * it's useful to ignore a case when inheritance will catch all the cases anyway.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @see java.util.Map.Entry
     * @generated
@@ -178,6 +194,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * This default implementation returns null so that we can easily ignore cases;
     * it's useful to ignore a case when inheritance will catch all the cases anyway.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @see java.util.Map.Entry
     * @generated
@@ -193,6 +210,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * This default implementation returns null so that we can easily ignore cases;
     * it's useful to ignore a case when inheritance will catch all the cases anyway.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @see java.util.Map.Entry
     * @generated
@@ -207,6 +225,7 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * <!-- begin-user-doc -->
     * This default implementation returns null.
     * <!-- end-user-doc -->
+    * 
     * @return the new adapter.
     * @generated
     */
@@ -215,4 +234,4 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
       return null;
    }
 
-} //CommonModelAdapterFactory
+} // CommonModelAdapterFactory

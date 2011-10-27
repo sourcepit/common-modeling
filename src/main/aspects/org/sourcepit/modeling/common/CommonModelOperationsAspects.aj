@@ -24,11 +24,19 @@ public abstract aspect CommonModelOperationsAspects extends CommonModelOperation
       return AnnotatableOperations.getAnnotationData(a.getAnnotations(), source, key);
    }
    
-   boolean around(Annotation a, String key, boolean defaultValue) : getData(a, key, defaultValue){
+   String around(Annotation a, String key, String defaultValue) : getStringData(a, key, defaultValue){
       return AnnotationOperations.getData(a, key, defaultValue);
    }
 
-   void around(Annotation a, String key, boolean value) : setData(a, key, value){
+   void around(Annotation a, String key, String value) : setStringData(a, key, value){
+      AnnotationOperations.setData(a, key, value);
+   }
+   
+   boolean around(Annotation a, String key, boolean defaultValue) : getBooleanData(a, key, defaultValue){
+      return AnnotationOperations.getData(a, key, defaultValue);
+   }
+
+   void around(Annotation a, String key, boolean value) : setBooleanData(a, key, value){
       AnnotationOperations.setData(a, key, value);
    }
 }

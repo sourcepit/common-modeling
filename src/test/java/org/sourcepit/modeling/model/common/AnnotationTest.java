@@ -22,26 +22,26 @@ public class AnnotationTest
    {
       Annotation annotation = CommonModelFactory.eINSTANCE.createAnnotation();
       annotation.setSource("srcpit");
-      
+
       annotation.getData().put("foo", "bar");
       annotation.getData().put("jdshfd", "sökdfdslfkdsjf");
-      
+
       Annotation content = CommonModelFactory.eINSTANCE.createAnnotation();
       content.getData().put("murk", "nicht");
-      
+
       annotation.getContents().put("hans", content);
-      
+
       annotation.getReferences().put("ref", content);
-      
+
       Annotation parent = CommonModelFactory.eINSTANCE.createAnnotation();
       parent.getAnnotations().add(annotation);
 
       Resource res = new XMLResourceImpl();
       res.getContents().add(parent);
-      
+
       ByteArrayOutputStream out = new ByteArrayOutputStream();
       res.save(out, null);
-      
+
       System.out.println(out);
    }
 
