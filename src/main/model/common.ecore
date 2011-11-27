@@ -45,6 +45,8 @@
         eType="#//EContainmentMapEntry" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
         eType="#//EReferenceMapEntry" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EStringMapEntry" instanceClassName="java.util.Map.Entry">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

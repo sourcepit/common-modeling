@@ -249,6 +249,17 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * 
     * @generated
     */
+   public EReference getAnnotation_Content()
+   {
+      return (EReference) annotationEClass.getEStructuralFeatures().get(5);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
    public EClass getEStringMapEntry()
    {
       return eStringMapEntryEClass;
@@ -407,6 +418,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       createEReference(annotationEClass, ANNOTATION__DATA);
       createEReference(annotationEClass, ANNOTATION__CONTENTS);
       createEReference(annotationEClass, ANNOTATION__REFERENCES);
+      createEReference(annotationEClass, ANNOTATION__CONTENT);
 
       eStringMapEntryEClass = createEClass(ESTRING_MAP_ENTRY);
       createEAttribute(eStringMapEntryEClass, ESTRING_MAP_ENTRY__KEY);
@@ -494,6 +506,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       initEReference(getAnnotation_References(), this.getEReferenceMapEntry(), null, "references", null, 0, -1,
          Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
          !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+      initEReference(getAnnotation_Content(), ecorePackage.getEObject(), null, "content", null, 0, 1, Annotation.class,
+         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+         !IS_DERIVED, IS_ORDERED);
 
       op = addEOperation(annotationEClass, ecorePackage.getEBoolean(), "getData", 0, 1, IS_UNIQUE, IS_ORDERED);
       addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);

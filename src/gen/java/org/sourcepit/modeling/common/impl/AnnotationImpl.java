@@ -40,6 +40,7 @@ import org.sourcepit.modeling.common.CommonModelPackage;
  * <li>{@link org.sourcepit.modeling.common.impl.AnnotationImpl#getData <em>Data</em>}</li>
  * <li>{@link org.sourcepit.modeling.common.impl.AnnotationImpl#getContents <em>Contents</em>}</li>
  * <li>{@link org.sourcepit.modeling.common.impl.AnnotationImpl#getReferences <em>References</em>}</li>
+ * <li>{@link org.sourcepit.modeling.common.impl.AnnotationImpl#getContent <em>Content</em>}</li>
  * </ul>
  * </p>
  * 
@@ -112,6 +113,17 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @ordered
     */
    protected EMap<String, EObject> references;
+
+   /**
+    * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @see #getContent()
+    * @generated
+    * @ordered
+    */
+   protected EObject content;
 
    /**
     * <!-- begin-user-doc -->
@@ -284,6 +296,65 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
+   public EObject getContent()
+   {
+      return content;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public NotificationChain basicSetContent(EObject newContent, NotificationChain msgs)
+   {
+      EObject oldContent = content;
+      content = newContent;
+      if (eNotificationRequired())
+      {
+         ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+            CommonModelPackage.ANNOTATION__CONTENT, oldContent, newContent);
+         if (msgs == null)
+            msgs = notification;
+         else
+            msgs.add(notification);
+      }
+      return msgs;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public void setContent(EObject newContent)
+   {
+      if (newContent != content)
+      {
+         NotificationChain msgs = null;
+         if (content != null)
+            msgs = ((InternalEObject) content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+               - CommonModelPackage.ANNOTATION__CONTENT, null, msgs);
+         if (newContent != null)
+            msgs = ((InternalEObject) newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+               - CommonModelPackage.ANNOTATION__CONTENT, null, msgs);
+         msgs = basicSetContent(newContent, msgs);
+         if (msgs != null)
+            msgs.dispatch();
+      }
+      else if (eNotificationRequired())
+         eNotify(new ENotificationImpl(this, Notification.SET, CommonModelPackage.ANNOTATION__CONTENT, newContent,
+            newContent));
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
    public boolean getData(String key, boolean defaultValue)
    {
       // TODO: implement this method
@@ -412,6 +483,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
             return ((InternalEList<?>) getContents()).basicRemove(otherEnd, msgs);
          case CommonModelPackage.ANNOTATION__REFERENCES :
             return ((InternalEList<?>) getReferences()).basicRemove(otherEnd, msgs);
+         case CommonModelPackage.ANNOTATION__CONTENT :
+            return basicSetContent(null, msgs);
       }
       return super.eInverseRemove(otherEnd, featureID, msgs);
    }
@@ -466,6 +539,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
                return getReferences();
             else
                return getReferences().map();
+         case CommonModelPackage.ANNOTATION__CONTENT :
+            return getContent();
       }
       return super.eGet(featureID, resolve, coreType);
    }
@@ -501,6 +576,9 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
          case CommonModelPackage.ANNOTATION__REFERENCES :
             ((EStructuralFeature.Setting) getReferences()).set(newValue);
             return;
+         case CommonModelPackage.ANNOTATION__CONTENT :
+            setContent((EObject) newValue);
+            return;
       }
       super.eSet(featureID, newValue);
    }
@@ -534,6 +612,9 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
          case CommonModelPackage.ANNOTATION__REFERENCES :
             getReferences().clear();
             return;
+         case CommonModelPackage.ANNOTATION__CONTENT :
+            setContent((EObject) null);
+            return;
       }
       super.eUnset(featureID);
    }
@@ -561,6 +642,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
             return contents != null && !contents.isEmpty();
          case CommonModelPackage.ANNOTATION__REFERENCES :
             return references != null && !references.isEmpty();
+         case CommonModelPackage.ANNOTATION__CONTENT :
+            return content != null;
       }
       return super.eIsSet(featureID);
    }

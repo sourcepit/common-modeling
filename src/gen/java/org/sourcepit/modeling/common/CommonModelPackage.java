@@ -170,6 +170,16 @@ public interface CommonModelPackage extends EPackage
    int ANNOTATION__REFERENCES = ANNOTATABLE_FEATURE_COUNT + 4;
 
    /**
+    * The feature id for the '<em><b>Content</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int ANNOTATION__CONTENT = ANNOTATABLE_FEATURE_COUNT + 5;
+
+   /**
     * The number of structural features of the '<em>Annotation</em>' class.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -177,7 +187,7 @@ public interface CommonModelPackage extends EPackage
     * @generated
     * @ordered
     */
-   int ANNOTATION_FEATURE_COUNT = ANNOTATABLE_FEATURE_COUNT + 5;
+   int ANNOTATION_FEATURE_COUNT = ANNOTATABLE_FEATURE_COUNT + 6;
 
    /**
     * The meta object id for the '{@link org.sourcepit.modeling.common.impl.EStringMapEntryImpl
@@ -428,6 +438,19 @@ public interface CommonModelPackage extends EPackage
    EReference getAnnotation_References();
 
    /**
+    * Returns the meta object for the containment reference '{@link org.sourcepit.modeling.common.Annotation#getContent
+    * <em>Content</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @return the meta object for the containment reference '<em>Content</em>'.
+    * @see org.sourcepit.modeling.common.Annotation#getContent()
+    * @see #getAnnotation()
+    * @generated
+    */
+   EReference getAnnotation_Content();
+
+   /**
     * Returns the meta object for class '{@link java.util.Map.Entry <em>EString Map Entry</em>}'.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -663,6 +686,15 @@ public interface CommonModelPackage extends EPackage
        * @generated
        */
       EReference ANNOTATION__REFERENCES = eINSTANCE.getAnnotation_References();
+
+      /**
+       * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * 
+       * @generated
+       */
+      EReference ANNOTATION__CONTENT = eINSTANCE.getAnnotation_Content();
 
       /**
        * The meta object literal for the '{@link org.sourcepit.modeling.common.impl.EStringMapEntryImpl

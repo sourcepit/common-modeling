@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * <li>{@link org.sourcepit.modeling.common.Annotation#getData <em>Data</em>}</li>
  * <li>{@link org.sourcepit.modeling.common.Annotation#getContents <em>Contents</em>}</li>
  * <li>{@link org.sourcepit.modeling.common.Annotation#getReferences <em>References</em>}</li>
+ * <li>{@link org.sourcepit.modeling.common.Annotation#getContent <em>Content</em>}</li>
  * </ul>
  * </p>
  * 
@@ -145,6 +146,35 @@ public interface Annotation extends Annotatable
     * @generated
     */
    EMap<String, EObject> getReferences();
+
+   /**
+    * Returns the value of the '<em><b>Content</b></em>' containment reference.
+    * <!-- begin-user-doc -->
+    * <p>
+    * If the meaning of the '<em>Content</em>' containment reference isn't clear, there really should be more of a
+    * description here...
+    * </p>
+    * <!-- end-user-doc -->
+    * 
+    * @return the value of the '<em>Content</em>' containment reference.
+    * @see #setContent(EObject)
+    * @see org.sourcepit.modeling.common.CommonModelPackage#getAnnotation_Content()
+    * @model containment="true"
+    * @generated
+    */
+   EObject getContent();
+
+   /**
+    * Sets the value of the '{@link org.sourcepit.modeling.common.Annotation#getContent <em>Content</em>}' containment
+    * reference.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @param value the new value of the '<em>Content</em>' containment reference.
+    * @see #getContent()
+    * @generated
+    */
+   void setContent(EObject value);
 
    /**
     * <!-- begin-user-doc -->
