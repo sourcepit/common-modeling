@@ -54,8 +54,8 @@
 				<directory>src/main/resources</directory>
 			</resource>
 			<resource>
-				<directory>src/main/model</directory>
-				<targetPath>META-INF/model</targetPath>
+				<directory>src/main/emf</directory>
+				<targetPath>META-INF/emf</targetPath>
 			</resource>
 		</resources>
 		<plugins>
@@ -71,7 +71,7 @@
 						<configuration>
 							<sources>
 								<source>${basedir}/src/main/aspects</source>
-								<source>${basedir}/src/gen/java</source>
+								<source>${basedir}/src/gen/emf</source>
 							</sources>
 						</configuration>
 					</execution>
