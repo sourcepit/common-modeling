@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<aspectj>
-	<aspects>
-		<aspect name="org.sourcepit.modeling.common.CommonModelOperations" />
-	</aspects>
-</aspectj>

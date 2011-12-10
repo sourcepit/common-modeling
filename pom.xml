@@ -86,6 +86,9 @@
 							<goal>compile</goal>
 							<goal>test-compile</goal>
 						</goals>
+						<configuration>
+							<outxmlfile>/META-INF/aop.xml</outxmlfile>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
