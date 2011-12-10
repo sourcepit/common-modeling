@@ -316,6 +316,37 @@ public interface CommonModelPackage extends EPackage
    int EREFERENCE_MAP_ENTRY_FEATURE_COUNT = 2;
 
    /**
+    * The meta object id for the '{@link org.sourcepit.modeling.common.Extendable <em>Extendable</em>}' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @see org.sourcepit.modeling.common.Extendable
+    * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getExtendable()
+    * @generated
+    */
+   int EXTENDABLE = 5;
+
+   /**
+    * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int EXTENDABLE__EXTENSIONS = 0;
+
+   /**
+    * The number of structural features of the '<em>Extendable</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int EXTENDABLE_FEATURE_COUNT = 1;
+
+   /**
     * The meta object id for the '<em>EJava File</em>' data type.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -324,7 +355,7 @@ public interface CommonModelPackage extends EPackage
     * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEJavaFile()
     * @generated
     */
-   int EJAVA_FILE = 5;
+   int EJAVA_FILE = 6;
 
    /**
     * The meta object id for the '<em>ELocale</em>' data type.
@@ -335,7 +366,7 @@ public interface CommonModelPackage extends EPackage
     * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getELocale()
     * @generated
     */
-   int ELOCALE = 6;
+   int ELOCALE = 7;
 
 
    /**
@@ -562,6 +593,30 @@ public interface CommonModelPackage extends EPackage
    EReference getEReferenceMapEntry_Value();
 
    /**
+    * Returns the meta object for class '{@link org.sourcepit.modeling.common.Extendable <em>Extendable</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @return the meta object for class '<em>Extendable</em>'.
+    * @see org.sourcepit.modeling.common.Extendable
+    * @generated
+    */
+   EClass getExtendable();
+
+   /**
+    * Returns the meta object for the containment reference list '
+    * {@link org.sourcepit.modeling.common.Extendable#getExtensions <em>Extensions</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @return the meta object for the containment reference list '<em>Extensions</em>'.
+    * @see org.sourcepit.modeling.common.Extendable#getExtensions()
+    * @see #getExtendable()
+    * @generated
+    */
+   EReference getExtendable_Extensions();
+
+   /**
     * Returns the meta object for data type '{@link java.io.File <em>EJava File</em>}'.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -785,6 +840,26 @@ public interface CommonModelPackage extends EPackage
        * @generated
        */
       EReference EREFERENCE_MAP_ENTRY__VALUE = eINSTANCE.getEReferenceMapEntry_Value();
+
+      /**
+       * The meta object literal for the '{@link org.sourcepit.modeling.common.Extendable <em>Extendable</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * 
+       * @see org.sourcepit.modeling.common.Extendable
+       * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getExtendable()
+       * @generated
+       */
+      EClass EXTENDABLE = eINSTANCE.getExtendable();
+
+      /**
+       * The meta object literal for the '<em><b>Extensions</b></em>' containment reference list feature.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * 
+       * @generated
+       */
+      EReference EXTENDABLE__EXTENSIONS = eINSTANCE.getExtendable_Extensions();
 
       /**
        * The meta object literal for the '<em>EJava File</em>' data type.

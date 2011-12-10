@@ -14,14 +14,17 @@ import java.util.Map.Entry;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.sourcepit.modeling.common.Annotatable;
 import org.sourcepit.modeling.common.Annotation;
 import org.sourcepit.modeling.common.CommonModelFactory;
 import org.sourcepit.modeling.common.CommonModelPackage;
+import org.sourcepit.modeling.common.Extendable;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,6 +74,14 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * @generated
     */
    private EClass eReferenceMapEntryEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   private EClass extendableEClass = null;
 
    /**
     * <!-- begin-user-doc -->
@@ -359,6 +370,28 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * 
     * @generated
     */
+   public EClass getExtendable()
+   {
+      return extendableEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public EReference getExtendable_Extensions()
+   {
+      return (EReference) extendableEClass.getEStructuralFeatures().get(0);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
    public EDataType getEJavaFile()
    {
       return eJavaFileEDataType;
@@ -431,6 +464,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       eReferenceMapEntryEClass = createEClass(EREFERENCE_MAP_ENTRY);
       createEAttribute(eReferenceMapEntryEClass, EREFERENCE_MAP_ENTRY__KEY);
       createEReference(eReferenceMapEntryEClass, EREFERENCE_MAP_ENTRY__VALUE);
+
+      extendableEClass = createEClass(EXTENDABLE);
+      createEReference(extendableEClass, EXTENDABLE__EXTENSIONS);
 
       // Create data types
       eJavaFileEDataType = createEDataType(EJAVA_FILE);
@@ -548,6 +584,57 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       initEReference(getEReferenceMapEntry_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Entry.class,
          !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
          !IS_DERIVED, IS_ORDERED);
+
+      initEClass(extendableEClass, Extendable.class, "Extendable", IS_ABSTRACT, IS_INTERFACE,
+         IS_GENERATED_INSTANCE_CLASS);
+      initEReference(getExtendable_Extensions(), ecorePackage.getEObject(), null, "extensions", null, 0, -1,
+         Extendable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+      op = addEOperation(extendableEClass, null, "getExtension", 0, 1, IS_UNIQUE, IS_ORDERED);
+      ETypeParameter t1 = addETypeParameter(op, "T");
+      EGenericType g1 = createEGenericType(ecorePackage.getEObject());
+      t1.getEBounds().add(g1);
+      g1 = createEGenericType(ecorePackage.getEJavaClass());
+      EGenericType g2 = createEGenericType(t1);
+      g1.getETypeArguments().add(g2);
+      addEParameter(op, g1, "extensionType", 1, 1, IS_UNIQUE, IS_ORDERED);
+      g1 = createEGenericType(t1);
+      initEOperation(op, g1);
+
+      op = addEOperation(extendableEClass, null, "getExtensions", 0, -1, IS_UNIQUE, IS_ORDERED);
+      t1 = addETypeParameter(op, "T");
+      g1 = createEGenericType(ecorePackage.getEObject());
+      t1.getEBounds().add(g1);
+      g1 = createEGenericType(ecorePackage.getEJavaClass());
+      g2 = createEGenericType(t1);
+      g1.getETypeArguments().add(g2);
+      addEParameter(op, g1, "extensionType", 1, 1, IS_UNIQUE, IS_ORDERED);
+      g1 = createEGenericType(t1);
+      initEOperation(op, g1);
+
+      op = addEOperation(extendableEClass, null, "addExtension", 0, 1, IS_UNIQUE, IS_ORDERED);
+      t1 = addETypeParameter(op, "T");
+      g1 = createEGenericType(ecorePackage.getEObject());
+      t1.getEBounds().add(g1);
+      g1 = createEGenericType(t1);
+      addEParameter(op, g1, "extension", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+      op = addEOperation(extendableEClass, null, "removeExtension", 0, 1, IS_UNIQUE, IS_ORDERED);
+      t1 = addETypeParameter(op, "T");
+      g1 = createEGenericType(ecorePackage.getEObject());
+      t1.getEBounds().add(g1);
+      g1 = createEGenericType(t1);
+      addEParameter(op, g1, "extension", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+      op = addEOperation(extendableEClass, null, "removeExtensions", 0, 1, IS_UNIQUE, IS_ORDERED);
+      t1 = addETypeParameter(op, "T");
+      g1 = createEGenericType(ecorePackage.getEObject());
+      t1.getEBounds().add(g1);
+      g1 = createEGenericType(ecorePackage.getEJavaClass());
+      g2 = createEGenericType(t1);
+      g1.getETypeArguments().add(g2);
+      addEParameter(op, g1, "extentionType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
       // Initialize data types
       initEDataType(eJavaFileEDataType, File.class, "EJavaFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

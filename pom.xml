@@ -24,6 +24,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.sourcepit.common</groupId>
+			<artifactId>common-constraints</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>org.eclipse.emf</groupId>
 			<artifactId>org.eclipse.emf.ecore</artifactId>
 		</dependency>
@@ -44,6 +49,11 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -88,6 +98,12 @@
 						</goals>
 						<configuration>
 							<outxmlfile>/META-INF/aop.xml</outxmlfile>
+							<aspectLibraries>
+								<aspectLibrary>
+									<groupId>org.sourcepit.common</groupId>
+									<artifactId>common-constraints</artifactId>
+								</aspectLibrary>
+							</aspectLibraries>
 						</configuration>
 					</execution>
 				</executions>

@@ -63,4 +63,56 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ELocale" instanceClassName="java.util.Locale"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Extendable" abstract="true" interface="true">
+    <eOperations name="getExtension">
+      <eGenericType eTypeParameter="#//Extendable/getExtension/T"/>
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eTypeParameters>
+      <eParameters name="extensionType" lowerBound="1">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments eTypeParameter="#//Extendable/getExtension/T"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getExtensions" upperBound="-1">
+      <eGenericType eTypeParameter="#//Extendable/getExtensions/T"/>
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eTypeParameters>
+      <eParameters name="extensionType" lowerBound="1">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments eTypeParameter="#//Extendable/getExtensions/T"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="addExtension">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eTypeParameters>
+      <eParameters name="extension">
+        <eGenericType eTypeParameter="#//Extendable/addExtension/T"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="removeExtension">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eTypeParameters>
+      <eParameters name="extension">
+        <eGenericType eTypeParameter="#//Extendable/removeExtension/T"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="removeExtensions">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eTypeParameters>
+      <eParameters name="extentionType">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+          <eTypeArguments eTypeParameter="#//Extendable/removeExtensions/T"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensions" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

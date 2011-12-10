@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.sourcepit.modeling.common.Annotatable;
 import org.sourcepit.modeling.common.Annotation;
 import org.sourcepit.modeling.common.CommonModelPackage;
+import org.sourcepit.modeling.common.Extendable;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,6 +114,12 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEReferenceMapEntry(Entry<String, EObject> object)
       {
          return createEReferenceMapEntryAdapter();
+      }
+
+      @Override
+      public Adapter caseExtendable(Extendable object)
+      {
+         return createExtendableAdapter();
       }
 
       @Override
@@ -216,6 +223,23 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * @generated
     */
    public Adapter createEReferenceMapEntryAdapter()
+   {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.Extendable <em>Extendable</em>}
+    * '.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * 
+    * @return the new adapter.
+    * @see org.sourcepit.modeling.common.Extendable
+    * @generated
+    */
+   public Adapter createExtendableAdapter()
    {
       return null;
    }
