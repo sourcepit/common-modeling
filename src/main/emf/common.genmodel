@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/common-modeling/src/gen/emf"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/common-modeling/gen/main/emf"
     modelPluginID="" modelName="Common" updateClasspath="false" importerID="org.eclipse.emf.importer.ecore"
     bundleManifest="false" complianceLevel="5.0" copyrightFields="false">
   <foreignModel>common.ecore</foreignModel>
@@ -58,6 +58,29 @@
     <genClasses ecoreClass="common.ecore#//EReferenceMapEntry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute common.ecore#//EReferenceMapEntry/key"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference common.ecore#//EReferenceMapEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="common.ecore#//Extendable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference common.ecore#//Extendable/extensions"/>
+      <genOperations ecoreOperation="common.ecore#//Extendable/getExtension">
+        <genParameters ecoreParameter="common.ecore#//Extendable/getExtension/extensionType"/>
+        <genTypeParameters ecoreTypeParameter="common.ecore#//Extendable/getExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="common.ecore#//Extendable/getExtensions">
+        <genParameters ecoreParameter="common.ecore#//Extendable/getExtensions/extensionType"/>
+        <genTypeParameters ecoreTypeParameter="common.ecore#//Extendable/getExtensions/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="common.ecore#//Extendable/addExtension">
+        <genParameters ecoreParameter="common.ecore#//Extendable/addExtension/extension"/>
+        <genTypeParameters ecoreTypeParameter="common.ecore#//Extendable/addExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="common.ecore#//Extendable/removeExtension">
+        <genParameters ecoreParameter="common.ecore#//Extendable/removeExtension/extension"/>
+        <genTypeParameters ecoreTypeParameter="common.ecore#//Extendable/removeExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="common.ecore#//Extendable/removeExtensions">
+        <genParameters ecoreParameter="common.ecore#//Extendable/removeExtensions/extentionType"/>
+        <genTypeParameters ecoreTypeParameter="common.ecore#//Extendable/removeExtensions/T"/>
+      </genOperations>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -26,10 +26,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-
 public interface Extendable extends EObject
 {
-
    /**
     * Returns the value of the '<em><b>Extensions</b></em>' containment reference list.
     * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
