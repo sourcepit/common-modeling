@@ -6,8 +6,12 @@
 
 package org.sourcepit.modeling.common;
 
+import org.sourcepit.modeling.common.impl.AnnotatableOperations;
 
-public abstract aspect CommonModelOperationsPCDs
+/**
+ * @author Bernd
+ */
+public aspect AnnotatableAspects
 {
    pointcut getAnnotation(Annotatable a, String source): target(a) && args(source) && execution(Annotation getAnnotation(String));
 
@@ -15,11 +19,15 @@ public abstract aspect CommonModelOperationsPCDs
 
    pointcut getAnnotationData(Annotatable a, String source, String key): target(a) && args(source, key) && execution(String getAnnotationData(String, String));
 
-   pointcut getStringData(Annotation a, String key, String defaultValue): target(a) && args(key, defaultValue) && execution(String getData(String, String));
+   Annotation around(Annotatable a, String source) : getAnnotation(a, source){
+      return AnnotatableOperations.getAnnotation(a.getAnnotations(), source);
+   }
 
-   pointcut setStringData(Annotation a, String key, String value): target(a) && args(key, value) && execution(void setData(String, String));
+   Annotation around(Annotatable a, String source, boolean createOnDemand) : getAnnotationAndCreate(a, source, createOnDemand){
+      return AnnotatableOperations.getAnnotation(a.getAnnotations(), source, createOnDemand);
+   }
 
-   pointcut getBooleanData(Annotation a, String key, boolean defaultValue): target(a) && args(key, defaultValue) && execution(boolean getData(String, boolean));
-
-   pointcut setBooleanData(Annotation a, String key, boolean value): target(a) && args(key, value) && execution(void setData(String, boolean));
+   String around(Annotatable a, String source, String key) : getAnnotationData(a, source, key){
+      return AnnotatableOperations.getAnnotationData(a.getAnnotations(), source, key);
+   }
 }
