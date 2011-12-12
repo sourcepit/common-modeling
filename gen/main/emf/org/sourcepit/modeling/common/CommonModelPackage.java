@@ -1,8 +1,7 @@
 /**
- * <copyright>
- * </copyright>
- * 
- * $Id$
+ * Copyright (c) 2011 Sourcepit.org contributors and others. All rights reserved. This program and the accompanying
+ * materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution,
+ * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
 package org.sourcepit.modeling.common;
@@ -347,6 +346,48 @@ public interface CommonModelPackage extends EPackage
    int EXTENDABLE_FEATURE_COUNT = 1;
 
    /**
+    * The meta object id for the '{@link org.sourcepit.modeling.common.impl.XAnnotatableImpl <em>XAnnotatable</em>}'
+    * class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @see org.sourcepit.modeling.common.impl.XAnnotatableImpl
+    * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getXAnnotatable()
+    * @generated
+    */
+   int XANNOTATABLE = 6;
+
+   /**
+    * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int XANNOTATABLE__EXTENSIONS = EXTENDABLE__EXTENSIONS;
+
+   /**
+    * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int XANNOTATABLE__ANNOTATIONS = EXTENDABLE_FEATURE_COUNT + 0;
+
+   /**
+    * The number of structural features of the '<em>XAnnotatable</em>' class.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    * @ordered
+    */
+   int XANNOTATABLE_FEATURE_COUNT = EXTENDABLE_FEATURE_COUNT + 1;
+
+   /**
     * The meta object id for the '<em>EJava File</em>' data type.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -355,7 +396,7 @@ public interface CommonModelPackage extends EPackage
     * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEJavaFile()
     * @generated
     */
-   int EJAVA_FILE = 6;
+   int EJAVA_FILE = 7;
 
    /**
     * The meta object id for the '<em>ELocale</em>' data type.
@@ -366,7 +407,7 @@ public interface CommonModelPackage extends EPackage
     * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getELocale()
     * @generated
     */
-   int ELOCALE = 7;
+   int ELOCALE = 8;
 
 
    /**
@@ -617,6 +658,17 @@ public interface CommonModelPackage extends EPackage
    EReference getExtendable_Extensions();
 
    /**
+    * Returns the meta object for class '{@link org.sourcepit.modeling.common.XAnnotatable <em>XAnnotatable</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @return the meta object for class '<em>XAnnotatable</em>'.
+    * @see org.sourcepit.modeling.common.XAnnotatable
+    * @generated
+    */
+   EClass getXAnnotatable();
+
+   /**
     * Returns the meta object for data type '{@link java.io.File <em>EJava File</em>}'.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -860,6 +912,18 @@ public interface CommonModelPackage extends EPackage
        * @generated
        */
       EReference EXTENDABLE__EXTENSIONS = eINSTANCE.getExtendable_Extensions();
+
+      /**
+       * The meta object literal for the '{@link org.sourcepit.modeling.common.impl.XAnnotatableImpl
+       * <em>XAnnotatable</em>}' class.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * 
+       * @see org.sourcepit.modeling.common.impl.XAnnotatableImpl
+       * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getXAnnotatable()
+       * @generated
+       */
+      EClass XANNOTATABLE = eINSTANCE.getXAnnotatable();
 
       /**
        * The meta object literal for the '<em>EJava File</em>' data type.

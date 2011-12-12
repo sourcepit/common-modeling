@@ -1,8 +1,7 @@
 /**
- * <copyright>
- * </copyright>
- * 
- * $Id$
+ * Copyright (c) 2011 Sourcepit.org contributors and others. All rights reserved. This program and the accompanying
+ * materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution,
+ * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
 package org.sourcepit.modeling.common.impl;
@@ -25,6 +24,7 @@ import org.sourcepit.modeling.common.Annotation;
 import org.sourcepit.modeling.common.CommonModelFactory;
 import org.sourcepit.modeling.common.CommonModelPackage;
 import org.sourcepit.modeling.common.Extendable;
+import org.sourcepit.modeling.common.XAnnotatable;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,6 +82,14 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * @generated
     */
    private EClass extendableEClass = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   private EClass xAnnotatableEClass = null;
 
    /**
     * <!-- begin-user-doc -->
@@ -392,6 +400,17 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * 
     * @generated
     */
+   public EClass getXAnnotatable()
+   {
+      return xAnnotatableEClass;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
    public EDataType getEJavaFile()
    {
       return eJavaFileEDataType;
@@ -468,6 +487,8 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       extendableEClass = createEClass(EXTENDABLE);
       createEReference(extendableEClass, EXTENDABLE__EXTENSIONS);
 
+      xAnnotatableEClass = createEClass(XANNOTATABLE);
+
       // Create data types
       eJavaFileEDataType = createEDataType(EJAVA_FILE);
       eLocaleEDataType = createEDataType(ELOCALE);
@@ -506,6 +527,8 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
 
       // Add supertypes to classes
       annotationEClass.getESuperTypes().add(this.getAnnotatable());
+      xAnnotatableEClass.getESuperTypes().add(this.getExtendable());
+      xAnnotatableEClass.getESuperTypes().add(this.getAnnotatable());
 
       // Initialize classes and features; add operations and parameters
       initEClass(annotatableEClass, Annotatable.class, "Annotatable", IS_ABSTRACT, IS_INTERFACE,
@@ -635,6 +658,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       g2 = createEGenericType(t1);
       g1.getETypeArguments().add(g2);
       addEParameter(op, g1, "extentionType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+      initEClass(xAnnotatableEClass, XAnnotatable.class, "XAnnotatable", IS_ABSTRACT, !IS_INTERFACE,
+         IS_GENERATED_INSTANCE_CLASS);
 
       // Initialize data types
       initEDataType(eJavaFileEDataType, File.class, "EJavaFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

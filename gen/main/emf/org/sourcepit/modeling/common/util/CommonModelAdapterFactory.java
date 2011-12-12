@@ -1,8 +1,7 @@
 /**
- * <copyright>
- * </copyright>
- * 
- * $Id$
+ * Copyright (c) 2011 Sourcepit.org contributors and others. All rights reserved. This program and the accompanying
+ * materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution,
+ * and is available at http://www.eclipse.org/legal/epl-v10.html
  */
 
 package org.sourcepit.modeling.common.util;
@@ -17,6 +16,7 @@ import org.sourcepit.modeling.common.Annotatable;
 import org.sourcepit.modeling.common.Annotation;
 import org.sourcepit.modeling.common.CommonModelPackage;
 import org.sourcepit.modeling.common.Extendable;
+import org.sourcepit.modeling.common.XAnnotatable;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,6 +120,12 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExtendable(Extendable object)
       {
          return createExtendableAdapter();
+      }
+
+      @Override
+      public Adapter caseXAnnotatable(XAnnotatable object)
+      {
+         return createXAnnotatableAdapter();
       }
 
       @Override
@@ -240,6 +246,23 @@ public class CommonModelAdapterFactory extends AdapterFactoryImpl
     * @generated
     */
    public Adapter createExtendableAdapter()
+   {
+      return null;
+   }
+
+   /**
+    * Creates a new adapter for an object of class '{@link org.sourcepit.modeling.common.XAnnotatable
+    * <em>XAnnotatable</em>}'.
+    * <!-- begin-user-doc -->
+    * This default implementation returns null so that we can easily ignore cases;
+    * it's useful to ignore a case when inheritance will catch all the cases anyway.
+    * <!-- end-user-doc -->
+    * 
+    * @return the new adapter.
+    * @see org.sourcepit.modeling.common.XAnnotatable
+    * @generated
+    */
+   public Adapter createXAnnotatableAdapter()
    {
       return null;
    }
