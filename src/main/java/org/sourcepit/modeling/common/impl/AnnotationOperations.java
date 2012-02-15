@@ -35,7 +35,7 @@ public final class AnnotationOperations
       final String value = annotation.getData().get(key);
       if (value != null)
       {
-         return Boolean.valueOf(key);
+         return Boolean.valueOf(value);
       }
       return defaultValue;
    }
