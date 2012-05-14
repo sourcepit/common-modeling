@@ -7,6 +7,7 @@
 package org.sourcepit.modeling.common.impl;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Locale;
 import java.util.Map.Entry;
 
@@ -101,10 +102,12 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    {
       switch (eDataType.getClassifierID())
       {
-         case CommonModelPackage.EJAVA_FILE :
-            return createEJavaFileFromString(eDataType, initialValue);
+         case CommonModelPackage.EFILE :
+            return createEFileFromString(eDataType, initialValue);
          case CommonModelPackage.ELOCALE :
             return createELocaleFromString(eDataType, initialValue);
+         case CommonModelPackage.EURL :
+            return createEURLFromString(eDataType, initialValue);
          default :
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
       }
@@ -121,10 +124,12 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
    {
       switch (eDataType.getClassifierID())
       {
-         case CommonModelPackage.EJAVA_FILE :
-            return convertEJavaFileToString(eDataType, instanceValue);
+         case CommonModelPackage.EFILE :
+            return convertEFileToString(eDataType, instanceValue);
          case CommonModelPackage.ELOCALE :
             return convertELocaleToString(eDataType, instanceValue);
+         case CommonModelPackage.EURL :
+            return convertEURLToString(eDataType, instanceValue);
          default :
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
       }
@@ -184,7 +189,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
     * 
     * @generated
     */
-   public File createEJavaFileFromString(EDataType eDataType, String initialValue)
+   public File createEFileFromString(EDataType eDataType, String initialValue)
    {
       return (File) super.createFromString(eDataType, initialValue);
    }
@@ -195,7 +200,7 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
     * 
     * @generated
     */
-   public String convertEJavaFileToString(EDataType eDataType, Object instanceValue)
+   public String convertEFileToString(EDataType eDataType, Object instanceValue)
    {
       return super.convertToString(eDataType, instanceValue);
    }
@@ -218,6 +223,28 @@ public class CommonModelFactoryImpl extends EFactoryImpl implements CommonModelF
     * @generated
     */
    public String convertELocaleToString(EDataType eDataType, Object instanceValue)
+   {
+      return super.convertToString(eDataType, instanceValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public URL createEURLFromString(EDataType eDataType, String initialValue)
+   {
+      return (URL) super.createFromString(eDataType, initialValue);
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public String convertEURLToString(EDataType eDataType, Object instanceValue)
    {
       return super.convertToString(eDataType, instanceValue);
    }

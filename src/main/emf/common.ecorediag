@@ -92,7 +92,7 @@
     <children xmi:type="notation:Node" xmi:id="_eVK44P1qEeCtzcTtnLyYnw" type="4008"/>
     <children xmi:type="notation:Node" xmi:id="_eVK44f1qEeCtzcTtnLyYnw" type="4009"/>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_eVKR0_1qEeCtzcTtnLyYnw" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EDataType" href="common.ecore#//EJavaFile"/>
+    <element xmi:type="ecore:EDataType" href="common.ecore#//EFile"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eVKR1P1qEeCtzcTtnLyYnw" x="570" y="10"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_eVK44v1qEeCtzcTtnLyYnw" type="1001">
@@ -200,6 +200,13 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_vOJH8iQIEeGE_rlTm_uGOA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="common.ecore#//XAnnotatable"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vOJH8yQIEeGE_rlTm_uGOA" x="655" y="400"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_TbBHEZ2dEeG56Ii0u9OTHQ" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_TbBHFJ2dEeG56Ii0u9OTHQ" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_TbBHFZ2dEeG56Ii0u9OTHQ" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_TbBHEp2dEeG56Ii0u9OTHQ" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="common.ecore#//EURL"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TbBHE52dEeG56Ii0u9OTHQ" x="380" y="5"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_eU_5wf1qEeCtzcTtnLyYnw"/>
   <element xmi:type="ecore:EPackage" href="common.ecore#/"/>

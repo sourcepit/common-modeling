@@ -52,7 +52,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="EJavaFile" instanceClassName="java.io.File"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EFile" instanceClassName="java.io.File"/>
   <eClassifiers xsi:type="ecore:EClass" name="EContainmentMapEntry" instanceClassName="java.util.Map.Entry">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
@@ -116,4 +116,5 @@
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="XAnnotatable" abstract="true" eSuperTypes="#//Extendable #//Annotatable"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EURL" instanceClassName="java.net.URL"/>
 </ecore:EPackage>

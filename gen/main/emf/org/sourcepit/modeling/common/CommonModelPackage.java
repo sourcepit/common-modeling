@@ -388,15 +388,15 @@ public interface CommonModelPackage extends EPackage
    int XANNOTATABLE_FEATURE_COUNT = EXTENDABLE_FEATURE_COUNT + 1;
 
    /**
-    * The meta object id for the '<em>EJava File</em>' data type.
+    * The meta object id for the '<em>EFile</em>' data type.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
     * 
     * @see java.io.File
-    * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEJavaFile()
+    * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEFile()
     * @generated
     */
-   int EJAVA_FILE = 7;
+   int EFILE = 7;
 
    /**
     * The meta object id for the '<em>ELocale</em>' data type.
@@ -408,6 +408,17 @@ public interface CommonModelPackage extends EPackage
     * @generated
     */
    int ELOCALE = 8;
+
+   /**
+    * The meta object id for the '<em>EURL</em>' data type.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @see java.net.URL
+    * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEURL()
+    * @generated
+    */
+   int EURL = 9;
 
 
    /**
@@ -669,16 +680,16 @@ public interface CommonModelPackage extends EPackage
    EClass getXAnnotatable();
 
    /**
-    * Returns the meta object for data type '{@link java.io.File <em>EJava File</em>}'.
+    * Returns the meta object for data type '{@link java.io.File <em>EFile</em>}'.
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
     * 
-    * @return the meta object for data type '<em>EJava File</em>'.
+    * @return the meta object for data type '<em>EFile</em>'.
     * @see java.io.File
     * @model instanceClass="java.io.File"
     * @generated
     */
-   EDataType getEJavaFile();
+   EDataType getEFile();
 
    /**
     * Returns the meta object for data type '{@link java.util.Locale <em>ELocale</em>}'.
@@ -691,6 +702,18 @@ public interface CommonModelPackage extends EPackage
     * @generated
     */
    EDataType getELocale();
+
+   /**
+    * Returns the meta object for data type '{@link java.net.URL <em>EURL</em>}'.
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @return the meta object for data type '<em>EURL</em>'.
+    * @see java.net.URL
+    * @model instanceClass="java.net.URL"
+    * @generated
+    */
+   EDataType getEURL();
 
    /**
     * Returns the factory that creates the instances of the model.
@@ -926,15 +949,15 @@ public interface CommonModelPackage extends EPackage
       EClass XANNOTATABLE = eINSTANCE.getXAnnotatable();
 
       /**
-       * The meta object literal for the '<em>EJava File</em>' data type.
+       * The meta object literal for the '<em>EFile</em>' data type.
        * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
        * 
        * @see java.io.File
-       * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEJavaFile()
+       * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEFile()
        * @generated
        */
-      EDataType EJAVA_FILE = eINSTANCE.getEJavaFile();
+      EDataType EFILE = eINSTANCE.getEFile();
 
       /**
        * The meta object literal for the '<em>ELocale</em>' data type.
@@ -946,6 +969,17 @@ public interface CommonModelPackage extends EPackage
        * @generated
        */
       EDataType ELOCALE = eINSTANCE.getELocale();
+
+      /**
+       * The meta object literal for the '<em>EURL</em>' data type.
+       * <!-- begin-user-doc -->
+       * <!-- end-user-doc -->
+       * 
+       * @see java.net.URL
+       * @see org.sourcepit.modeling.common.impl.CommonModelPackageImpl#getEURL()
+       * @generated
+       */
+      EDataType EURL = eINSTANCE.getEURL();
 
    }
 

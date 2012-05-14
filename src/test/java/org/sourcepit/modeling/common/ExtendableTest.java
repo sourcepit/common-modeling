@@ -164,7 +164,7 @@ public class ExtendableTest
 
       extendable.removeExtensions(Annotation.class);
       assertThat(extendable.getExtensions().size(), Is.is(2));
-      
+
       extendable.removeExtensions(Annotatable.class);
       assertThat(extendable.getExtensions().size(), Is.is(0));
    }

@@ -7,6 +7,7 @@
 package org.sourcepit.modeling.common.impl;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Locale;
 import java.util.Map.Entry;
 
@@ -97,7 +98,7 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * 
     * @generated
     */
-   private EDataType eJavaFileEDataType = null;
+   private EDataType eFileEDataType = null;
 
    /**
     * <!-- begin-user-doc -->
@@ -106,6 +107,14 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * @generated
     */
    private EDataType eLocaleEDataType = null;
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   private EDataType eurlEDataType = null;
 
    /**
     * Creates an instance of the model <b>Package</b>, registered with {@link org.eclipse.emf.ecore.EPackage.Registry
@@ -411,9 +420,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
     * 
     * @generated
     */
-   public EDataType getEJavaFile()
+   public EDataType getEFile()
    {
-      return eJavaFileEDataType;
+      return eFileEDataType;
    }
 
    /**
@@ -425,6 +434,17 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
    public EDataType getELocale()
    {
       return eLocaleEDataType;
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
+   public EDataType getEURL()
+   {
+      return eurlEDataType;
    }
 
    /**
@@ -490,8 +510,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       xAnnotatableEClass = createEClass(XANNOTATABLE);
 
       // Create data types
-      eJavaFileEDataType = createEDataType(EJAVA_FILE);
+      eFileEDataType = createEDataType(EFILE);
       eLocaleEDataType = createEDataType(ELOCALE);
+      eurlEDataType = createEDataType(EURL);
    }
 
    /**
@@ -663,8 +684,9 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
          IS_GENERATED_INSTANCE_CLASS);
 
       // Initialize data types
-      initEDataType(eJavaFileEDataType, File.class, "EJavaFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+      initEDataType(eFileEDataType, File.class, "EFile", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
       initEDataType(eLocaleEDataType, Locale.class, "ELocale", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+      initEDataType(eurlEDataType, URL.class, "EURL", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
       // Create resource
       createResource(eNS_URI);
