@@ -1,5 +1,6 @@
-#Sat Dec 10 11:41:24 CET 2011
 eclipse.preferences.version=1
+encoding//gen/main/emf=UTF-8
+encoding//src/main/aspectj=UTF-8
 encoding//src/main/emf=UTF-8
 encoding//src/main/emf/common.ecore=UTF-8
 encoding//src/main/emf/common.ecorediag=UTF-8
