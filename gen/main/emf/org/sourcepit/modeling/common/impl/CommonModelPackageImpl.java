@@ -570,6 +570,11 @@ public class CommonModelPackageImpl extends EPackageImpl implements CommonModelP
       addEParameter(op, ecorePackage.getEString(), "source", 0, 1, IS_UNIQUE, IS_ORDERED);
       addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+      op = addEOperation(annotatableEClass, ecorePackage.getEString(), "setAnnotationData", 1, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "source", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "key", 0, 1, IS_UNIQUE, IS_ORDERED);
+      addEParameter(op, ecorePackage.getEString(), "value", 0, 1, IS_UNIQUE, IS_ORDERED);
+
       initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE,
          IS_GENERATED_INSTANCE_CLASS);
       initEReference(getAnnotation_Target(), this.getAnnotatable(), this.getAnnotatable_Annotations(), "target", null,

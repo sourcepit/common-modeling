@@ -13,16 +13,14 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Annotatable</b></em>'. <!-- end-user-doc -->
  * 
- * <p
+ * <p>
  * The following features are supported:
  * <ul>
- * <li>@
- * <li>g.sourcepit.modeling.common.Annotatable#getAnnotations <em>Annotations</em></li>
+ * <li>{@link org.sourcepit.modeling.common.Annotatable#getAnnotations <em>Annotations</em>}</li>
  * </ul>
  * </p>
  * 
- * @se
- *     rg.sourcepit.modeling.common.CommonModelPackage#getAnnotatable()
+ * @see org.sourcepit.modeling.common.CommonModelPackage#getAnnotatable()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -51,8 +49,7 @@ public interface Annotatable extends EObject
    /**
     * <!-- begin-user-doc --> <!-- end-user-doc -->
     * 
-    * @mod
-    *      l
+    * @model
     * @generated
     */
    Annotation getAnnotation(String source);
@@ -60,8 +57,7 @@ public interface Annotatable extends EObject
    /**
     * <!-- begin-user-doc --> <!-- end-user-doc -->
     * 
-    * @mo
-    *     el
+    * @model
     * @generated
     */
    Annotation getAnnotation(String source, boolean createOnDemand);
@@ -69,10 +65,18 @@ public interface Annotatable extends EObject
    /**
     * <!-- begin-user-doc --> <!-- end-user-doc -->
     * 
-    * @m
-    *    del
+    * @model
     * @generated
     */
    String getAnnotationData(String source, String key);
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @model required="true"
+    * @generated
+    */
+   String setAnnotationData(String source, String key, String value);
 
 } // Annotatable

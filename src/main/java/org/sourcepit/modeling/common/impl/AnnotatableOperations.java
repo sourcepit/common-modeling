@@ -62,4 +62,20 @@ public final class AnnotatableOperations
       }
       return null;
    }
+
+   public static String setAnnotationData(EList<Annotation> annotations, String source, String key, String value)
+   {
+      if (key == null)
+      {
+         throw new IllegalArgumentException("Key must not be null.");
+      }
+      Annotation annotation = getAnnotation(annotations, source);
+      if (annotation == null)
+      {
+         annotation = CommonModelFactory.eINSTANCE.createAnnotation();
+         annotation.setSource(source);
+         annotations.add(annotation);
+      }
+      return annotation.getData().put(key, value);
+   }
 }

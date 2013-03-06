@@ -196,6 +196,30 @@ public abstract class AbstractAnnotatableTest
       }
       assertThat(count, IsNot.not(0));
    }
+   
+   public void testSetAnnptationData() throws Exception
+   {
+      List<EClass> annotateableTypes = getAnnotateableTypes();
+      for (EClass eClass : annotateableTypes)
+      {
+         Annotatable annotateable = createAnnotateable(eClass);
+         try
+         {
+            annotateable.setAnnotationData(null, null, null);
+            fail("Must throw IllegalArgumentException");
+         }
+         catch (IllegalArgumentException e)
+         {
+         }
+         catch (UnsupportedOperationException e)
+         {
+            fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
+         }
+
+         assertNull(annotateable.setAnnotationData("source", "key", "value"));
+         assertEquals("value", annotateable.setAnnotationData("source", "key", "newValue"));
+      }
+   }
 
    private List<EClass> getAnnotateableTypes()
    {

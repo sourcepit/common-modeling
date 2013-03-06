@@ -160,6 +160,19 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
+   public String setAnnotationData(String source, String key, String value)
+   {
+      // TODO: implement this method
+      // Ensure that you remove @generated or mark it @generated NOT
+      throw new UnsupportedOperationException();
+   }
+
+   /**
+    * <!-- begin-user-doc -->
+    * <!-- end-user-doc -->
+    * 
+    * @generated
+    */
    public <T extends EObject> T getExtension(Class<T> extensionType)
    {
       // TODO: implement this method
