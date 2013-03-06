@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011 Sourcepit.org contributors and others. All rights reserved. This program and the accompanying&#xD;&#xA;materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution,&#xD;&#xA;and is available at http://www.eclipse.org/legal/epl-v10.html"
     modelDirectory="/common-modeling/gen/main/emf" modelPluginID="" modelName="Common"
     updateClasspath="false" importerID="org.eclipse.emf.importer.ecore" bundleManifest="false"
     complianceLevel="5.0" copyrightFields="false">
   <foreignModel>common.ecore</foreignModel>
-  <genPackages prefix="CommonModel" basePackage="org.sourcepit.modeling" disposableProviderFactory="true"
+  <genPackages prefix="CommonModeling" basePackage="org.sourcepit" disposableProviderFactory="true"
+      interfacePackageSuffix="modeling" metaDataPackageSuffix="modeling" classPackageSuffix="modeling.impl"
+      utilityPackageSuffix="modeling.util" providerPackageSuffix="modeling.provider"
+      presentationPackageSuffix="modeling.presentation" testsPackageSuffix="modeling.tests"
       ecorePackage="common.ecore#/">
-    <genDataTypes ecoreDataType="common.ecore#//EJavaFile"/>
+    <genDataTypes ecoreDataType="common.ecore#//EFile"/>
     <genDataTypes ecoreDataType="common.ecore#//ELocale"/>
+    <genDataTypes ecoreDataType="common.ecore#//EURL"/>
     <genClasses image="false" ecoreClass="common.ecore#//Annotatable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference common.ecore#//Annotatable/annotations"/>
       <genOperations ecoreOperation="common.ecore#//Annotatable/getAnnotation">
@@ -22,6 +25,11 @@
       <genOperations ecoreOperation="common.ecore#//Annotatable/getAnnotationData">
         <genParameters ecoreParameter="common.ecore#//Annotatable/getAnnotationData/source"/>
         <genParameters ecoreParameter="common.ecore#//Annotatable/getAnnotationData/key"/>
+      </genOperations>
+      <genOperations ecoreOperation="common.ecore#//Annotatable/setAnnotationData">
+        <genParameters ecoreParameter="common.ecore#//Annotatable/setAnnotationData/source"/>
+        <genParameters ecoreParameter="common.ecore#//Annotatable/setAnnotationData/key"/>
+        <genParameters ecoreParameter="common.ecore#//Annotatable/setAnnotationData/value"/>
       </genOperations>
     </genClasses>
     <genClasses ecoreClass="common.ecore#//Annotation">
