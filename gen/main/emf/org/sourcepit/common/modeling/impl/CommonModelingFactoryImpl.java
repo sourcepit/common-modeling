@@ -42,7 +42,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
       try
       {
          CommonModelingFactory theCommonModelingFactory = (CommonModelingFactory) EPackage.Registry.INSTANCE
-            .getEFactory("http://www.sourcepit.org/modeling/common/0.1");
+            .getEFactory("http://www.sourcepit.org/common/modeling/0.1");
          if (theCommonModelingFactory != null)
          {
             return theCommonModelingFactory;

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011 Sourcepit.org contributors and others. All rights reserved. This program and the accompanying&#xD;&#xA;materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution,&#xD;&#xA;and is available at http://www.eclipse.org/legal/epl-v10.html"
+    modelDirectory="/common-modeling/gen/main/emf" modelPluginID="" modelName="CommonModeling"
+    updateClasspath="false" importerID="org.eclipse.emf.importer.ecore" bundleManifest="false"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>CommonModeling.ecore</foreignModel>
+  <genPackages prefix="CommonModeling" basePackage="org.sourcepit.common" disposableProviderFactory="true"
+      ecorePackage="CommonModeling.ecore#/">
+    <genDataTypes ecoreDataType="CommonModeling.ecore#//EFile"/>
+    <genDataTypes ecoreDataType="CommonModeling.ecore#//ELocale"/>
+    <genDataTypes ecoreDataType="CommonModeling.ecore#//EURL"/>
+    <genClasses image="false" ecoreClass="CommonModeling.ecore#//Annotatable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotatable/annotations"/>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotatable/getAnnotation">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/getAnnotation/source"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotatable/getAnnotation.1">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/getAnnotation.1/source"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/getAnnotation.1/createOnDemand"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotatable/getAnnotationData">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/getAnnotationData/source"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/getAnnotationData/key"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotatable/setAnnotationData">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/setAnnotationData/source"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/setAnnotationData/key"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotatable/setAnnotationData/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="CommonModeling.ecore#//Annotation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotation/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CommonModeling.ecore#//Annotation/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotation/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotation/contents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotation/references"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Annotation/content"/>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotation/getData">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/getData/key"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/getData/defaultValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotation/setData">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/setData/key"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/setData/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotation/getData.1">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/getData.1/key"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/getData.1/defaultValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Annotation/setData.1">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/setData.1/key"/>
+        <genParameters ecoreParameter="CommonModeling.ecore#//Annotation/setData.1/defaultValue"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="CommonModeling.ecore#//EStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CommonModeling.ecore#//EStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CommonModeling.ecore#//EStringMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CommonModeling.ecore#//EContainmentMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CommonModeling.ecore#//EContainmentMapEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//EContainmentMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CommonModeling.ecore#//EReferenceMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CommonModeling.ecore#//EReferenceMapEntry/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//EReferenceMapEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CommonModeling.ecore#//Extendable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CommonModeling.ecore#//Extendable/extensions"/>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Extendable/getExtension">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Extendable/getExtension/extensionType"/>
+        <genTypeParameters ecoreTypeParameter="CommonModeling.ecore#//Extendable/getExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Extendable/getExtensions">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Extendable/getExtensions/extensionType"/>
+        <genTypeParameters ecoreTypeParameter="CommonModeling.ecore#//Extendable/getExtensions/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Extendable/addExtension">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Extendable/addExtension/extension"/>
+        <genTypeParameters ecoreTypeParameter="CommonModeling.ecore#//Extendable/addExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Extendable/removeExtension">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Extendable/removeExtension/extension"/>
+        <genTypeParameters ecoreTypeParameter="CommonModeling.ecore#//Extendable/removeExtension/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="CommonModeling.ecore#//Extendable/removeExtensions">
+        <genParameters ecoreParameter="CommonModeling.ecore#//Extendable/removeExtensions/extentionType"/>
+        <genTypeParameters ecoreTypeParameter="CommonModeling.ecore#//Extendable/removeExtensions/T"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CommonModeling.ecore#//XAnnotatable"/>
+  </genPackages>
+</genmodel:GenModel>

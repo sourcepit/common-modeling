@@ -37,7 +37,7 @@ public interface CommonModelingPackage extends EPackage
     * 
     * @generated
     */
-   String eNAME = "common";
+   String eNAME = "modeling";
 
    /**
     * The package namespace URI.
@@ -46,7 +46,7 @@ public interface CommonModelingPackage extends EPackage
     * 
     * @generated
     */
-   String eNS_URI = "http://www.sourcepit.org/modeling/common/0.1";
+   String eNS_URI = "http://www.sourcepit.org/common/modeling/0.1";
 
    /**
     * The package namespace name.
@@ -55,7 +55,7 @@ public interface CommonModelingPackage extends EPackage
     * 
     * @generated
     */
-   String eNS_PREFIX = "common";
+   String eNS_PREFIX = "common-modeling";
 
    /**
     * The singleton instance of the package.

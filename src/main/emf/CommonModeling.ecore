@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="common" nsURI="http://www.sourcepit.org/modeling/common/0.1"
-    nsPrefix="common">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modeling" nsURI="http://www.sourcepit.org/common/modeling/0.1"
+    nsPrefix="common-modeling">
   <eClassifiers xsi:type="ecore:EClass" name="Annotatable" abstract="true" interface="true">
     <eOperations name="getAnnotation" eType="#//Annotation">
       <eParameters name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
