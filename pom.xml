@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.sourcepit</groupId>
 		<artifactId>srcpit-parent</artifactId>
-		<version>10-SNAPSHOT</version>
+		<version>10</version>
 	</parent>
 	<groupId>org.sourcepit.common</groupId>
 	<artifactId>common-modeling</artifactId>
@@ -27,7 +27,7 @@
 			<dependency>
 				<groupId>org.sourcepit.common</groupId>
 				<artifactId>common-constraints</artifactId>
-				<version>0.1.0-alpha-3</version>
+				<version>0.1.0-alpha-4</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
