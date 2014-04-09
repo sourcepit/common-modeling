@@ -10,8 +10,6 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 
-import javax.validation.ConstraintViolationException;
-
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -71,7 +69,7 @@ public class ExtendableTest
          extendable.getExtension(null);
          fail();
       }
-      catch (ConstraintViolationException e)
+      catch (IllegalArgumentException e)
       {
       }
 
@@ -80,7 +78,7 @@ public class ExtendableTest
          extendable.getExtensions(null);
          fail();
       }
-      catch (ConstraintViolationException e)
+      catch (IllegalArgumentException e)
       {
       }
 
@@ -89,7 +87,7 @@ public class ExtendableTest
          extendable.addExtension(null);
          fail();
       }
-      catch (ConstraintViolationException e)
+      catch (IllegalArgumentException e)
       {
       }
 
@@ -98,7 +96,7 @@ public class ExtendableTest
          extendable.removeExtension(null);
          fail();
       }
-      catch (ConstraintViolationException e)
+      catch (IllegalArgumentException e)
       {
       }
 
@@ -107,7 +105,7 @@ public class ExtendableTest
          extendable.removeExtensions(null);
          fail();
       }
-      catch (ConstraintViolationException e)
+      catch (IllegalArgumentException e)
       {
       }
    }
