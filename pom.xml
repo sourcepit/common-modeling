@@ -27,7 +27,7 @@
 			<dependency>
 				<groupId>org.sourcepit.common</groupId>
 				<artifactId>org.sourcepit.common.constraints</artifactId>
-				<version>0.13.0-SNAPSHOT</version>
+				<version>0.13.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
