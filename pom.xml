@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>org.sourcepit</groupId>
 		<artifactId>srcpit-parent</artifactId>
-		<version>18-SNAPSHOT</version>
+		<version>18</version>
 	</parent>
 	<groupId>org.sourcepit.common</groupId>
 	<artifactId>org.sourcepit.common.modeling</artifactId>
@@ -44,7 +44,7 @@
 			<dependency>
 				<groupId>org.sourcepit.common</groupId>
 				<artifactId>org.sourcepit.common.constraints</artifactId>
-				<version>0.14.0-SNAPSHOT</version>
+				<version>0.14.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
