@@ -19,7 +19,7 @@
 	<parent>
 		<groupId>org.sourcepit</groupId>
 		<artifactId>srcpit-parent</artifactId>
-		<version>19</version>
+		<version>20-SNAPSHOT</version>
 	</parent>
 	<groupId>org.sourcepit.common</groupId>
 	<artifactId>org.sourcepit.common.modeling</artifactId>
@@ -47,7 +47,7 @@
 			<dependency>
 				<groupId>org.sourcepit.common</groupId>
 				<artifactId>org.sourcepit.common.constraints</artifactId>
-				<version>0.14.1</version>
+				<version>0.15.0-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -154,7 +154,7 @@
 			<plugin>
 				<groupId>org.sourcepit.osgifier</groupId>
 				<artifactId>osgifier-maven-plugin</artifactId>
-				<version>0.21.1</version>
+				<version>0.22.1</version>
 				<executions>
 					<execution>
 						<goals>
