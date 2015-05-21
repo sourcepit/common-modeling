@@ -22,12 +22,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 import org.junit.Test;
 
-public class AnnotationTest
-{
+public class AnnotationTest {
 
    @Test
-   public void test() throws Exception
-   {
+   public void test() throws Exception {
       Annotation annotation = CommonModelingFactory.eINSTANCE.createAnnotation();
       annotation.setSource("srcpit");
 

@@ -27,11 +27,9 @@ import org.junit.Test;
 /**
  * @author Bernd
  */
-public class ELocaleTest
-{
+public class ELocaleTest {
    @Test
-   public void testConvert() throws Exception
-   {
+   public void testConvert() throws Exception {
       EDataType eLocaleType = CommonModelingPackage.eINSTANCE.getELocale();
       CommonModelingFactory converter = CommonModelingFactory.eINSTANCE;
 
@@ -43,8 +41,7 @@ public class ELocaleTest
    }
 
    @Test
-   public void testFromString() throws Exception
-   {
+   public void testFromString() throws Exception {
       EDataType eLocaleType = CommonModelingPackage.eINSTANCE.getELocale();
       CommonModelingFactory converter = CommonModelingFactory.eINSTANCE;
 

@@ -20,11 +20,9 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
 
-public class AnnotatableTest extends AbstractAnnotatableTest
-{
+public class AnnotatableTest extends AbstractAnnotatableTest {
    @Override
-   protected void addEPackages(List<EPackage> ePackages)
-   {
+   protected void addEPackages(List<EPackage> ePackages) {
       ePackages.add(CommonModelingPackage.eINSTANCE);
    }
 

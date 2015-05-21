@@ -38,8 +38,7 @@ import org.sourcepit.common.modeling.CommonModelingPackage;
  * 
  * @generated
  */
-public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonModelingFactory
-{
+public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonModelingFactory {
    /**
     * Creates the default factory implementation.
     * <!-- begin-user-doc -->
@@ -47,19 +46,14 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public static CommonModelingFactory init()
-   {
-      try
-      {
-         CommonModelingFactory theCommonModelingFactory = (CommonModelingFactory) EPackage.Registry.INSTANCE
-            .getEFactory("http://www.sourcepit.org/common/modeling/0.1");
-         if (theCommonModelingFactory != null)
-         {
+   public static CommonModelingFactory init() {
+      try {
+         CommonModelingFactory theCommonModelingFactory = (CommonModelingFactory) EPackage.Registry.INSTANCE.getEFactory("http://www.sourcepit.org/common/modeling/0.1");
+         if (theCommonModelingFactory != null) {
             return theCommonModelingFactory;
          }
       }
-      catch (Exception exception)
-      {
+      catch (Exception exception) {
          EcorePlugin.INSTANCE.log(exception);
       }
       return new CommonModelingFactoryImpl();
@@ -72,8 +66,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public CommonModelingFactoryImpl()
-   {
+   public CommonModelingFactoryImpl() {
       super();
    }
 
@@ -84,10 +77,8 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * @generated
     */
    @Override
-   public EObject create(EClass eClass)
-   {
-      switch (eClass.getClassifierID())
-      {
+   public EObject create(EClass eClass) {
+      switch (eClass.getClassifierID()) {
          case CommonModelingPackage.ANNOTATION :
             return createAnnotation();
          case CommonModelingPackage.ESTRING_MAP_ENTRY :
@@ -108,10 +99,8 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * @generated
     */
    @Override
-   public Object createFromString(EDataType eDataType, String initialValue)
-   {
-      switch (eDataType.getClassifierID())
-      {
+   public Object createFromString(EDataType eDataType, String initialValue) {
+      switch (eDataType.getClassifierID()) {
          case CommonModelingPackage.EFILE :
             return createEFileFromString(eDataType, initialValue);
          case CommonModelingPackage.ELOCALE :
@@ -130,10 +119,8 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * @generated
     */
    @Override
-   public String convertToString(EDataType eDataType, Object instanceValue)
-   {
-      switch (eDataType.getClassifierID())
-      {
+   public String convertToString(EDataType eDataType, Object instanceValue) {
+      switch (eDataType.getClassifierID()) {
          case CommonModelingPackage.EFILE :
             return convertEFileToString(eDataType, instanceValue);
          case CommonModelingPackage.ELOCALE :
@@ -151,8 +138,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public Annotation createAnnotation()
-   {
+   public Annotation createAnnotation() {
       AnnotationImpl annotation = new AnnotationImpl();
       return annotation;
    }
@@ -163,8 +149,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public Entry<String, String> createEStringMapEntry()
-   {
+   public Entry<String, String> createEStringMapEntry() {
       EStringMapEntryImpl eStringMapEntry = new EStringMapEntryImpl();
       return eStringMapEntry;
    }
@@ -175,8 +160,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public Entry<String, EObject> createEContainmentMapEntry()
-   {
+   public Entry<String, EObject> createEContainmentMapEntry() {
       EContainmentMapEntryImpl eContainmentMapEntry = new EContainmentMapEntryImpl();
       return eContainmentMapEntry;
    }
@@ -187,8 +171,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public Entry<String, EObject> createEReferenceMapEntry()
-   {
+   public Entry<String, EObject> createEReferenceMapEntry() {
       EReferenceMapEntryImpl eReferenceMapEntry = new EReferenceMapEntryImpl();
       return eReferenceMapEntry;
    }
@@ -199,8 +182,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public File createEFileFromString(EDataType eDataType, String initialValue)
-   {
+   public File createEFileFromString(EDataType eDataType, String initialValue) {
       return (File) super.createFromString(eDataType, initialValue);
    }
 
@@ -210,8 +192,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public String convertEFileToString(EDataType eDataType, Object instanceValue)
-   {
+   public String convertEFileToString(EDataType eDataType, Object instanceValue) {
       return super.convertToString(eDataType, instanceValue);
    }
 
@@ -221,8 +202,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public Locale createELocaleFromString(EDataType eDataType, String initialValue)
-   {
+   public Locale createELocaleFromString(EDataType eDataType, String initialValue) {
       return (Locale) super.createFromString(eDataType, initialValue);
    }
 
@@ -232,8 +212,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public String convertELocaleToString(EDataType eDataType, Object instanceValue)
-   {
+   public String convertELocaleToString(EDataType eDataType, Object instanceValue) {
       return super.convertToString(eDataType, instanceValue);
    }
 
@@ -243,8 +222,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public URL createEURLFromString(EDataType eDataType, String initialValue)
-   {
+   public URL createEURLFromString(EDataType eDataType, String initialValue) {
       return (URL) super.createFromString(eDataType, initialValue);
    }
 
@@ -254,8 +232,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public String convertEURLToString(EDataType eDataType, Object instanceValue)
-   {
+   public String convertEURLToString(EDataType eDataType, Object instanceValue) {
       return super.convertToString(eDataType, instanceValue);
    }
 
@@ -265,8 +242,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * 
     * @generated
     */
-   public CommonModelingPackage getCommonModelingPackage()
-   {
+   public CommonModelingPackage getCommonModelingPackage() {
       return (CommonModelingPackage) getEPackage();
    }
 
@@ -278,8 +254,7 @@ public class CommonModelingFactoryImpl extends EFactoryImpl implements CommonMod
     * @generated
     */
    @Deprecated
-   public static CommonModelingPackage getPackage()
-   {
+   public static CommonModelingPackage getPackage() {
       return CommonModelingPackage.eINSTANCE;
    }
 

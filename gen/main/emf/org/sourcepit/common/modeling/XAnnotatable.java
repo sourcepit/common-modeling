@@ -27,6 +27,5 @@ package org.sourcepit.common.modeling;
  * @model abstract="true"
  * @generated
  */
-public interface XAnnotatable extends Extendable, Annotatable
-{
+public interface XAnnotatable extends Extendable, Annotatable {
 } // XAnnotatable

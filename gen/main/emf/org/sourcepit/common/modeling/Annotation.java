@@ -40,8 +40,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Annotation extends Annotatable
-{
+public interface Annotation extends Annotatable {
    /**
     * Returns the value of the '<em><b>Target</b></em>' container reference.
     * It is bidirectional and its opposite is '{@link org.sourcepit.common.modeling.Annotatable#getAnnotations

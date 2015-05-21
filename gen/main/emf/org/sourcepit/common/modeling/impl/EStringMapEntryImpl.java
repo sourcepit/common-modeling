@@ -39,8 +39,7 @@ import org.sourcepit.common.modeling.CommonModelingPackage;
  * 
  * @generated
  */
-public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, String>
-{
+public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, String> {
    /**
     * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
     * <!-- begin-user-doc -->
@@ -91,8 +90,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   protected EStringMapEntryImpl()
-   {
+   protected EStringMapEntryImpl() {
       super();
    }
 
@@ -103,8 +101,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   protected EClass eStaticClass()
-   {
+   protected EClass eStaticClass() {
       return CommonModelingPackage.Literals.ESTRING_MAP_ENTRY;
    }
 
@@ -114,8 +111,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public String getTypedKey()
-   {
+   public String getTypedKey() {
       return key;
    }
 
@@ -125,8 +121,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public void setTypedKey(String newKey)
-   {
+   public void setTypedKey(String newKey) {
       String oldKey = key;
       key = newKey;
       if (eNotificationRequired())
@@ -140,8 +135,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public String getTypedValue()
-   {
+   public String getTypedValue() {
       return value;
    }
 
@@ -151,8 +145,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public void setTypedValue(String newValue)
-   {
+   public void setTypedValue(String newValue) {
       String oldValue = value;
       value = newValue;
       if (eNotificationRequired())
@@ -167,10 +160,8 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   public Object eGet(int featureID, boolean resolve, boolean coreType)
-   {
-      switch (featureID)
-      {
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
          case CommonModelingPackage.ESTRING_MAP_ENTRY__KEY :
             return getTypedKey();
          case CommonModelingPackage.ESTRING_MAP_ENTRY__VALUE :
@@ -186,10 +177,8 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   public void eSet(int featureID, Object newValue)
-   {
-      switch (featureID)
-      {
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
          case CommonModelingPackage.ESTRING_MAP_ENTRY__KEY :
             setTypedKey((String) newValue);
             return;
@@ -207,10 +196,8 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   public void eUnset(int featureID)
-   {
-      switch (featureID)
-      {
+   public void eUnset(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ESTRING_MAP_ENTRY__KEY :
             setTypedKey(KEY_EDEFAULT);
             return;
@@ -228,10 +215,8 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   public boolean eIsSet(int featureID)
-   {
-      switch (featureID)
-      {
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ESTRING_MAP_ENTRY__KEY :
             return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
          case CommonModelingPackage.ESTRING_MAP_ENTRY__VALUE :
@@ -247,8 +232,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @Override
-   public String toString()
-   {
+   public String toString() {
       if (eIsProxy())
          return super.toString();
 
@@ -275,10 +259,8 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public int getHash()
-   {
-      if (hash == -1)
-      {
+   public int getHash() {
+      if (hash == -1) {
          Object theKey = getKey();
          hash = (theKey == null ? 0 : theKey.hashCode());
       }
@@ -291,8 +273,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public void setHash(int hash)
-   {
+   public void setHash(int hash) {
       this.hash = hash;
    }
 
@@ -302,8 +283,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public String getKey()
-   {
+   public String getKey() {
       return getTypedKey();
    }
 
@@ -313,8 +293,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public void setKey(String key)
-   {
+   public void setKey(String key) {
       setTypedKey(key);
    }
 
@@ -324,8 +303,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public String getValue()
-   {
+   public String getValue() {
       return getTypedValue();
    }
 
@@ -335,8 +313,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * 
     * @generated
     */
-   public String setValue(String value)
-   {
+   public String setValue(String value) {
       String oldValue = getValue();
       setTypedValue(value);
       return oldValue;
@@ -349,8 +326,7 @@ public class EStringMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<
     * @generated
     */
    @SuppressWarnings("unchecked")
-   public EMap<String, String> getEMap()
-   {
+   public EMap<String, String> getEMap() {
       EObject container = eContainer();
       return container == null ? null : (EMap<String, String>) container.eGet(eContainmentFeature());
    }

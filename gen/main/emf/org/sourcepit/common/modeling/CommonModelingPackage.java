@@ -38,8 +38,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model kind="package"
  * @generated
  */
-public interface CommonModelingPackage extends EPackage
-{
+public interface CommonModelingPackage extends EPackage {
    /**
     * The package name.
     * <!-- begin-user-doc -->
@@ -748,8 +747,7 @@ public interface CommonModelingPackage extends EPackage
     * 
     * @generated
     */
-   interface Literals
-   {
+   interface Literals {
       /**
        * The meta object literal for the '{@link org.sourcepit.common.modeling.Annotatable <em>Annotatable</em>}' class.
        * <!-- begin-user-doc -->

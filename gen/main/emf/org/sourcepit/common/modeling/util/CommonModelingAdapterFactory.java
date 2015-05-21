@@ -37,8 +37,7 @@ import org.sourcepit.common.modeling.XAnnotatable;
  * @see org.sourcepit.common.modeling.CommonModelingPackage
  * @generated
  */
-public class CommonModelingAdapterFactory extends AdapterFactoryImpl
-{
+public class CommonModelingAdapterFactory extends AdapterFactoryImpl {
    /**
     * The cached model package.
     * <!-- begin-user-doc -->
@@ -55,10 +54,8 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * 
     * @generated
     */
-   public CommonModelingAdapterFactory()
-   {
-      if (modelPackage == null)
-      {
+   public CommonModelingAdapterFactory() {
+      if (modelPackage == null) {
          modelPackage = CommonModelingPackage.eINSTANCE;
       }
    }
@@ -74,14 +71,11 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @generated
     */
    @Override
-   public boolean isFactoryForType(Object object)
-   {
-      if (object == modelPackage)
-      {
+   public boolean isFactoryForType(Object object) {
+      if (object == modelPackage) {
          return true;
       }
-      if (object instanceof EObject)
-      {
+      if (object instanceof EObject) {
          return ((EObject) object).eClass().getEPackage() == modelPackage;
       }
       return false;
@@ -94,53 +88,44 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * 
     * @generated
     */
-   protected CommonModelingSwitch<Adapter> modelSwitch = new CommonModelingSwitch<Adapter>()
-   {
+   protected CommonModelingSwitch<Adapter> modelSwitch = new CommonModelingSwitch<Adapter>() {
       @Override
-      public Adapter caseAnnotatable(Annotatable object)
-      {
+      public Adapter caseAnnotatable(Annotatable object) {
          return createAnnotatableAdapter();
       }
 
       @Override
-      public Adapter caseAnnotation(Annotation object)
-      {
+      public Adapter caseAnnotation(Annotation object) {
          return createAnnotationAdapter();
       }
 
       @Override
-      public Adapter caseEStringMapEntry(Entry<String, String> object)
-      {
+      public Adapter caseEStringMapEntry(Entry<String, String> object) {
          return createEStringMapEntryAdapter();
       }
 
       @Override
-      public Adapter caseEContainmentMapEntry(Entry<String, EObject> object)
-      {
+      public Adapter caseEContainmentMapEntry(Entry<String, EObject> object) {
          return createEContainmentMapEntryAdapter();
       }
 
       @Override
-      public Adapter caseEReferenceMapEntry(Entry<String, EObject> object)
-      {
+      public Adapter caseEReferenceMapEntry(Entry<String, EObject> object) {
          return createEReferenceMapEntryAdapter();
       }
 
       @Override
-      public Adapter caseExtendable(Extendable object)
-      {
+      public Adapter caseExtendable(Extendable object) {
          return createExtendableAdapter();
       }
 
       @Override
-      public Adapter caseXAnnotatable(XAnnotatable object)
-      {
+      public Adapter caseXAnnotatable(XAnnotatable object) {
          return createXAnnotatableAdapter();
       }
 
       @Override
-      public Adapter defaultCase(EObject object)
-      {
+      public Adapter defaultCase(EObject object) {
          return createEObjectAdapter();
       }
    };
@@ -155,8 +140,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @generated
     */
    @Override
-   public Adapter createAdapter(Notifier target)
-   {
+   public Adapter createAdapter(Notifier target) {
       return modelSwitch.doSwitch((EObject) target);
    }
 
@@ -173,8 +157,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see org.sourcepit.common.modeling.Annotatable
     * @generated
     */
-   public Adapter createAnnotatableAdapter()
-   {
+   public Adapter createAnnotatableAdapter() {
       return null;
    }
 
@@ -190,8 +173,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see org.sourcepit.common.modeling.Annotation
     * @generated
     */
-   public Adapter createAnnotationAdapter()
-   {
+   public Adapter createAnnotationAdapter() {
       return null;
    }
 
@@ -206,8 +188,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see java.util.Map.Entry
     * @generated
     */
-   public Adapter createEStringMapEntryAdapter()
-   {
+   public Adapter createEStringMapEntryAdapter() {
       return null;
    }
 
@@ -222,8 +203,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see java.util.Map.Entry
     * @generated
     */
-   public Adapter createEContainmentMapEntryAdapter()
-   {
+   public Adapter createEContainmentMapEntryAdapter() {
       return null;
    }
 
@@ -238,8 +218,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see java.util.Map.Entry
     * @generated
     */
-   public Adapter createEReferenceMapEntryAdapter()
-   {
+   public Adapter createEReferenceMapEntryAdapter() {
       return null;
    }
 
@@ -255,8 +234,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see org.sourcepit.common.modeling.Extendable
     * @generated
     */
-   public Adapter createExtendableAdapter()
-   {
+   public Adapter createExtendableAdapter() {
       return null;
    }
 
@@ -272,8 +250,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @see org.sourcepit.common.modeling.XAnnotatable
     * @generated
     */
-   public Adapter createXAnnotatableAdapter()
-   {
+   public Adapter createXAnnotatableAdapter() {
       return null;
    }
 
@@ -286,8 +263,7 @@ public class CommonModelingAdapterFactory extends AdapterFactoryImpl
     * @return the new adapter.
     * @generated
     */
-   public Adapter createEObjectAdapter()
-   {
+   public Adapter createEObjectAdapter() {
       return null;
    }
 

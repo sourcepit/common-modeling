@@ -40,8 +40,7 @@ import org.sourcepit.common.modeling.CommonModelingPackage;
  * 
  * @generated
  */
-public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, EObject>
-{
+public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, EObject> {
    /**
     * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
     * <!-- begin-user-doc -->
@@ -81,8 +80,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   protected EReferenceMapEntryImpl()
-   {
+   protected EReferenceMapEntryImpl() {
       super();
    }
 
@@ -93,8 +91,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   protected EClass eStaticClass()
-   {
+   protected EClass eStaticClass() {
       return CommonModelingPackage.Literals.EREFERENCE_MAP_ENTRY;
    }
 
@@ -104,8 +101,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public String getTypedKey()
-   {
+   public String getTypedKey() {
       return key;
    }
 
@@ -115,8 +111,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public void setTypedKey(String newKey)
-   {
+   public void setTypedKey(String newKey) {
       String oldKey = key;
       key = newKey;
       if (eNotificationRequired())
@@ -130,14 +125,11 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public EObject getTypedValue()
-   {
-      if (value != null && value.eIsProxy())
-      {
+   public EObject getTypedValue() {
+      if (value != null && value.eIsProxy()) {
          InternalEObject oldValue = (InternalEObject) value;
          value = eResolveProxy(oldValue);
-         if (value != oldValue)
-         {
+         if (value != oldValue) {
             if (eNotificationRequired())
                eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                   CommonModelingPackage.EREFERENCE_MAP_ENTRY__VALUE, oldValue, value));
@@ -152,8 +144,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public EObject basicGetTypedValue()
-   {
+   public EObject basicGetTypedValue() {
       return value;
    }
 
@@ -163,8 +154,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public void setTypedValue(EObject newValue)
-   {
+   public void setTypedValue(EObject newValue) {
       EObject oldValue = value;
       value = newValue;
       if (eNotificationRequired())
@@ -179,10 +169,8 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   public Object eGet(int featureID, boolean resolve, boolean coreType)
-   {
-      switch (featureID)
-      {
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__KEY :
             return getTypedKey();
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__VALUE :
@@ -200,10 +188,8 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   public void eSet(int featureID, Object newValue)
-   {
-      switch (featureID)
-      {
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__KEY :
             setTypedKey((String) newValue);
             return;
@@ -221,10 +207,8 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   public void eUnset(int featureID)
-   {
-      switch (featureID)
-      {
+   public void eUnset(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__KEY :
             setTypedKey(KEY_EDEFAULT);
             return;
@@ -242,10 +226,8 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   public boolean eIsSet(int featureID)
-   {
-      switch (featureID)
-      {
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__KEY :
             return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
          case CommonModelingPackage.EREFERENCE_MAP_ENTRY__VALUE :
@@ -261,8 +243,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @Override
-   public String toString()
-   {
+   public String toString() {
       if (eIsProxy())
          return super.toString();
 
@@ -287,10 +268,8 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public int getHash()
-   {
-      if (hash == -1)
-      {
+   public int getHash() {
+      if (hash == -1) {
          Object theKey = getKey();
          hash = (theKey == null ? 0 : theKey.hashCode());
       }
@@ -303,8 +282,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public void setHash(int hash)
-   {
+   public void setHash(int hash) {
       this.hash = hash;
    }
 
@@ -314,8 +292,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public String getKey()
-   {
+   public String getKey() {
       return getTypedKey();
    }
 
@@ -325,8 +302,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public void setKey(String key)
-   {
+   public void setKey(String key) {
       setTypedKey(key);
    }
 
@@ -336,8 +312,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public EObject getValue()
-   {
+   public EObject getValue() {
       return getTypedValue();
    }
 
@@ -347,8 +322,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * 
     * @generated
     */
-   public EObject setValue(EObject value)
-   {
+   public EObject setValue(EObject value) {
       EObject oldValue = getValue();
       setTypedValue(value);
       return oldValue;
@@ -361,8 +335,7 @@ public class EReferenceMapEntryImpl extends EObjectImpl implements BasicEMap.Ent
     * @generated
     */
    @SuppressWarnings("unchecked")
-   public EMap<String, EObject> getEMap()
-   {
+   public EMap<String, EObject> getEMap() {
       EObject container = eContainer();
       return container == null ? null : (EMap<String, EObject>) container.eGet(eContainmentFeature());
    }

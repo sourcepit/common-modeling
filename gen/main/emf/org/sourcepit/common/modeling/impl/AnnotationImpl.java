@@ -55,8 +55,7 @@ import org.sourcepit.common.modeling.CommonModelingPackage;
  * 
  * @generated
  */
-public class AnnotationImpl extends EObjectImpl implements Annotation
-{
+public class AnnotationImpl extends EObjectImpl implements Annotation {
    /**
     * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
     * <!-- begin-user-doc -->
@@ -140,8 +139,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   protected AnnotationImpl()
-   {
+   protected AnnotationImpl() {
       super();
    }
 
@@ -152,8 +150,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   protected EClass eStaticClass()
-   {
+   protected EClass eStaticClass() {
       return CommonModelingPackage.Literals.ANNOTATION;
    }
 
@@ -163,10 +160,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public EList<Annotation> getAnnotations()
-   {
-      if (annotations == null)
-      {
+   public EList<Annotation> getAnnotations() {
+      if (annotations == null) {
          annotations = new EObjectContainmentWithInverseEList<Annotation>(Annotation.class, this,
             CommonModelingPackage.ANNOTATION__ANNOTATIONS, CommonModelingPackage.ANNOTATION__TARGET);
       }
@@ -179,8 +174,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public Annotatable getTarget()
-   {
+   public Annotatable getTarget() {
       if (eContainerFeatureID() != CommonModelingPackage.ANNOTATION__TARGET)
          return null;
       return (Annotatable) eContainer();
@@ -192,8 +186,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public NotificationChain basicSetTarget(Annotatable newTarget, NotificationChain msgs)
-   {
+   public NotificationChain basicSetTarget(Annotatable newTarget, NotificationChain msgs) {
       msgs = eBasicSetContainer((InternalEObject) newTarget, CommonModelingPackage.ANNOTATION__TARGET, msgs);
       return msgs;
    }
@@ -204,11 +197,9 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public void setTarget(Annotatable newTarget)
-   {
+   public void setTarget(Annotatable newTarget) {
       if (newTarget != eInternalContainer()
-         || (eContainerFeatureID() != CommonModelingPackage.ANNOTATION__TARGET && newTarget != null))
-      {
+         || (eContainerFeatureID() != CommonModelingPackage.ANNOTATION__TARGET && newTarget != null)) {
          if (EcoreUtil.isAncestor(this, newTarget))
             throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
          NotificationChain msgs = null;
@@ -232,8 +223,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public String getSource()
-   {
+   public String getSource() {
       return source;
    }
 
@@ -243,8 +233,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public void setSource(String newSource)
-   {
+   public void setSource(String newSource) {
       String oldSource = source;
       source = newSource;
       if (eNotificationRequired())
@@ -258,10 +247,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public EMap<String, String> getData()
-   {
-      if (data == null)
-      {
+   public EMap<String, String> getData() {
+      if (data == null) {
          data = new EcoreEMap<String, String>(CommonModelingPackage.Literals.ESTRING_MAP_ENTRY,
             EStringMapEntryImpl.class, this, CommonModelingPackage.ANNOTATION__DATA);
       }
@@ -274,10 +261,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public EMap<String, EObject> getContents()
-   {
-      if (contents == null)
-      {
+   public EMap<String, EObject> getContents() {
+      if (contents == null) {
          contents = new EcoreEMap<String, EObject>(CommonModelingPackage.Literals.ECONTAINMENT_MAP_ENTRY,
             EContainmentMapEntryImpl.class, this, CommonModelingPackage.ANNOTATION__CONTENTS);
       }
@@ -290,10 +275,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public EMap<String, EObject> getReferences()
-   {
-      if (references == null)
-      {
+   public EMap<String, EObject> getReferences() {
+      if (references == null) {
          references = new EcoreEMap<String, EObject>(CommonModelingPackage.Literals.EREFERENCE_MAP_ENTRY,
             EReferenceMapEntryImpl.class, this, CommonModelingPackage.ANNOTATION__REFERENCES);
       }
@@ -306,8 +289,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public EObject getContent()
-   {
+   public EObject getContent() {
       return content;
    }
 
@@ -317,12 +299,10 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public NotificationChain basicSetContent(EObject newContent, NotificationChain msgs)
-   {
+   public NotificationChain basicSetContent(EObject newContent, NotificationChain msgs) {
       EObject oldContent = content;
       content = newContent;
-      if (eNotificationRequired())
-      {
+      if (eNotificationRequired()) {
          ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
             CommonModelingPackage.ANNOTATION__CONTENT, oldContent, newContent);
          if (msgs == null)
@@ -339,10 +319,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public void setContent(EObject newContent)
-   {
-      if (newContent != content)
-      {
+   public void setContent(EObject newContent) {
+      if (newContent != content) {
          NotificationChain msgs = null;
          if (content != null)
             msgs = ((InternalEObject) content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -365,8 +343,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public boolean getData(String key, boolean defaultValue)
-   {
+   public boolean getData(String key, boolean defaultValue) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -378,8 +355,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public void setData(String key, boolean value)
-   {
+   public void setData(String key, boolean value) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -391,8 +367,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public String getData(String key, String defaultValue)
-   {
+   public String getData(String key, String defaultValue) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -404,8 +379,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public void setData(String key, String defaultValue)
-   {
+   public void setData(String key, String defaultValue) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -417,8 +391,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public Annotation getAnnotation(String source)
-   {
+   public Annotation getAnnotation(String source) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -430,8 +403,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public Annotation getAnnotation(String source, boolean createOnDemand)
-   {
+   public Annotation getAnnotation(String source, boolean createOnDemand) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -443,8 +415,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public String getAnnotationData(String source, String key)
-   {
+   public String getAnnotationData(String source, String key) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -456,8 +427,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * 
     * @generated
     */
-   public String setAnnotationData(String source, String key, String value)
-   {
+   public String setAnnotationData(String source, String key, String value) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -471,10 +441,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     */
    @SuppressWarnings("unchecked")
    @Override
-   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-   {
-      switch (featureID)
-      {
+   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getAnnotations()).basicAdd(otherEnd, msgs);
          case CommonModelingPackage.ANNOTATION__TARGET :
@@ -492,10 +460,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-   {
-      switch (featureID)
-      {
+   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             return ((InternalEList<?>) getAnnotations()).basicRemove(otherEnd, msgs);
          case CommonModelingPackage.ANNOTATION__TARGET :
@@ -519,10 +485,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
-   {
-      switch (eContainerFeatureID())
-      {
+   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+      switch (eContainerFeatureID()) {
          case CommonModelingPackage.ANNOTATION__TARGET :
             return eInternalContainer().eInverseRemove(this, CommonModelingPackage.ANNOTATABLE__ANNOTATIONS,
                Annotatable.class, msgs);
@@ -537,10 +501,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public Object eGet(int featureID, boolean resolve, boolean coreType)
-   {
-      switch (featureID)
-      {
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             return getAnnotations();
          case CommonModelingPackage.ANNOTATION__TARGET :
@@ -576,10 +538,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     */
    @SuppressWarnings("unchecked")
    @Override
-   public void eSet(int featureID, Object newValue)
-   {
-      switch (featureID)
-      {
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             getAnnotations().clear();
             getAnnotations().addAll((Collection<? extends Annotation>) newValue);
@@ -613,10 +573,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public void eUnset(int featureID)
-   {
-      switch (featureID)
-      {
+   public void eUnset(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             getAnnotations().clear();
             return;
@@ -649,10 +607,8 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public boolean eIsSet(int featureID)
-   {
-      switch (featureID)
-      {
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ANNOTATION__ANNOTATIONS :
             return annotations != null && !annotations.isEmpty();
          case CommonModelingPackage.ANNOTATION__TARGET :
@@ -678,8 +634,7 @@ public class AnnotationImpl extends EObjectImpl implements Annotation
     * @generated
     */
    @Override
-   public String toString()
-   {
+   public String toString() {
       if (eIsProxy())
          return super.toString();
 

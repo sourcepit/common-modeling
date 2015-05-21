@@ -41,8 +41,7 @@ import org.sourcepit.common.modeling.XAnnotatable;
  * @see org.sourcepit.common.modeling.CommonModelingPackage
  * @generated
  */
-public class CommonModelingSwitch<T> extends Switch<T>
-{
+public class CommonModelingSwitch<T> extends Switch<T> {
    /**
     * The cached model package
     * <!-- begin-user-doc -->
@@ -59,10 +58,8 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * 
     * @generated
     */
-   public CommonModelingSwitch()
-   {
-      if (modelPackage == null)
-      {
+   public CommonModelingSwitch() {
+      if (modelPackage == null) {
          modelPackage = CommonModelingPackage.eINSTANCE;
       }
    }
@@ -77,8 +74,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @generated
     */
    @Override
-   protected boolean isSwitchFor(EPackage ePackage)
-   {
+   protected boolean isSwitchFor(EPackage ePackage) {
       return ePackage == modelPackage;
    }
 
@@ -91,20 +87,16 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @generated
     */
    @Override
-   protected T doSwitch(int classifierID, EObject theEObject)
-   {
-      switch (classifierID)
-      {
-         case CommonModelingPackage.ANNOTATABLE :
-         {
+   protected T doSwitch(int classifierID, EObject theEObject) {
+      switch (classifierID) {
+         case CommonModelingPackage.ANNOTATABLE : {
             Annotatable annotatable = (Annotatable) theEObject;
             T result = caseAnnotatable(annotatable);
             if (result == null)
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.ANNOTATION :
-         {
+         case CommonModelingPackage.ANNOTATION : {
             Annotation annotation = (Annotation) theEObject;
             T result = caseAnnotation(annotation);
             if (result == null)
@@ -113,8 +105,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.ESTRING_MAP_ENTRY :
-         {
+         case CommonModelingPackage.ESTRING_MAP_ENTRY : {
             @SuppressWarnings("unchecked")
             Entry<String, String> eStringMapEntry = (Entry<String, String>) theEObject;
             T result = caseEStringMapEntry(eStringMapEntry);
@@ -122,8 +113,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY :
-         {
+         case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY : {
             @SuppressWarnings("unchecked")
             Entry<String, EObject> eContainmentMapEntry = (Entry<String, EObject>) theEObject;
             T result = caseEContainmentMapEntry(eContainmentMapEntry);
@@ -131,8 +121,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.EREFERENCE_MAP_ENTRY :
-         {
+         case CommonModelingPackage.EREFERENCE_MAP_ENTRY : {
             @SuppressWarnings("unchecked")
             Entry<String, EObject> eReferenceMapEntry = (Entry<String, EObject>) theEObject;
             T result = caseEReferenceMapEntry(eReferenceMapEntry);
@@ -140,16 +129,14 @@ public class CommonModelingSwitch<T> extends Switch<T>
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.EXTENDABLE :
-         {
+         case CommonModelingPackage.EXTENDABLE : {
             Extendable extendable = (Extendable) theEObject;
             T result = caseExtendable(extendable);
             if (result == null)
                result = defaultCase(theEObject);
             return result;
          }
-         case CommonModelingPackage.XANNOTATABLE :
-         {
+         case CommonModelingPackage.XANNOTATABLE : {
             XAnnotatable xAnnotatable = (XAnnotatable) theEObject;
             T result = caseXAnnotatable(xAnnotatable);
             if (result == null)
@@ -177,8 +164,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseAnnotatable(Annotatable object)
-   {
+   public T caseAnnotatable(Annotatable object) {
       return null;
    }
 
@@ -194,8 +180,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseAnnotation(Annotation object)
-   {
+   public T caseAnnotation(Annotation object) {
       return null;
    }
 
@@ -211,8 +196,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseEStringMapEntry(Entry<String, String> object)
-   {
+   public T caseEStringMapEntry(Entry<String, String> object) {
       return null;
    }
 
@@ -228,8 +212,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseEContainmentMapEntry(Entry<String, EObject> object)
-   {
+   public T caseEContainmentMapEntry(Entry<String, EObject> object) {
       return null;
    }
 
@@ -245,8 +228,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseEReferenceMapEntry(Entry<String, EObject> object)
-   {
+   public T caseEReferenceMapEntry(Entry<String, EObject> object) {
       return null;
    }
 
@@ -262,8 +244,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseExtendable(Extendable object)
-   {
+   public T caseExtendable(Extendable object) {
       return null;
    }
 
@@ -279,8 +260,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
     * @generated
     */
-   public T caseXAnnotatable(XAnnotatable object)
-   {
+   public T caseXAnnotatable(XAnnotatable object) {
       return null;
    }
 
@@ -297,8 +277,7 @@ public class CommonModelingSwitch<T> extends Switch<T>
     * @generated
     */
    @Override
-   public T defaultCase(EObject object)
-   {
+   public T defaultCase(EObject object) {
       return null;
    }
 

@@ -18,40 +18,32 @@ package org.sourcepit.common.modeling.impl;
 
 import org.sourcepit.common.modeling.Annotation;
 
-public final class AnnotationOperations
-{
-   private AnnotationOperations()
-   {
+public final class AnnotationOperations {
+   private AnnotationOperations() {
       super();
    }
 
-   public static String getData(Annotation annotation, String key, String defaultValue)
-   {
+   public static String getData(Annotation annotation, String key, String defaultValue) {
       final String value = annotation.getData().get(key);
-      if (value != null)
-      {
+      if (value != null) {
          return value;
       }
       return defaultValue;
    }
 
-   public static void setData(Annotation annotation, String key, String value)
-   {
+   public static void setData(Annotation annotation, String key, String value) {
       annotation.getData().put(key, value);
    }
 
-   public static boolean getData(Annotation annotation, String key, boolean defaultValue)
-   {
+   public static boolean getData(Annotation annotation, String key, boolean defaultValue) {
       final String value = annotation.getData().get(key);
-      if (value != null)
-      {
+      if (value != null) {
          return Boolean.valueOf(value);
       }
       return defaultValue;
    }
 
-   public static void setData(Annotation annotation, String key, boolean value)
-   {
+   public static void setData(Annotation annotation, String key, boolean value) {
       annotation.getData().put(key, Boolean.toString(value));
    }
 }

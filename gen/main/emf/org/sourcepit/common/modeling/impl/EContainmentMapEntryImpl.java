@@ -41,8 +41,7 @@ import org.sourcepit.common.modeling.CommonModelingPackage;
  * 
  * @generated
  */
-public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, EObject>
-{
+public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.Entry<String, EObject> {
    /**
     * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
     * <!-- begin-user-doc -->
@@ -82,8 +81,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   protected EContainmentMapEntryImpl()
-   {
+   protected EContainmentMapEntryImpl() {
       super();
    }
 
@@ -94,8 +92,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   protected EClass eStaticClass()
-   {
+   protected EClass eStaticClass() {
       return CommonModelingPackage.Literals.ECONTAINMENT_MAP_ENTRY;
    }
 
@@ -105,8 +102,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public String getTypedKey()
-   {
+   public String getTypedKey() {
       return key;
    }
 
@@ -116,8 +112,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public void setTypedKey(String newKey)
-   {
+   public void setTypedKey(String newKey) {
       String oldKey = key;
       key = newKey;
       if (eNotificationRequired())
@@ -131,8 +126,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public EObject getTypedValue()
-   {
+   public EObject getTypedValue() {
       return value;
    }
 
@@ -142,12 +136,10 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public NotificationChain basicSetTypedValue(EObject newValue, NotificationChain msgs)
-   {
+   public NotificationChain basicSetTypedValue(EObject newValue, NotificationChain msgs) {
       EObject oldValue = value;
       value = newValue;
-      if (eNotificationRequired())
-      {
+      if (eNotificationRequired()) {
          ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
             CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__VALUE, oldValue, newValue);
          if (msgs == null)
@@ -164,10 +156,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public void setTypedValue(EObject newValue)
-   {
-      if (newValue != value)
-      {
+   public void setTypedValue(EObject newValue) {
+      if (newValue != value) {
          NotificationChain msgs = null;
          if (value != null)
             msgs = ((InternalEObject) value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -191,10 +181,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-   {
-      switch (featureID)
-      {
+   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__VALUE :
             return basicSetTypedValue(null, msgs);
       }
@@ -208,10 +196,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public Object eGet(int featureID, boolean resolve, boolean coreType)
-   {
-      switch (featureID)
-      {
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__KEY :
             return getTypedKey();
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__VALUE :
@@ -227,10 +213,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public void eSet(int featureID, Object newValue)
-   {
-      switch (featureID)
-      {
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__KEY :
             setTypedKey((String) newValue);
             return;
@@ -248,10 +232,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public void eUnset(int featureID)
-   {
-      switch (featureID)
-      {
+   public void eUnset(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__KEY :
             setTypedKey(KEY_EDEFAULT);
             return;
@@ -269,10 +251,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public boolean eIsSet(int featureID)
-   {
-      switch (featureID)
-      {
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__KEY :
             return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
          case CommonModelingPackage.ECONTAINMENT_MAP_ENTRY__VALUE :
@@ -288,8 +268,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @Override
-   public String toString()
-   {
+   public String toString() {
       if (eIsProxy())
          return super.toString();
 
@@ -314,10 +293,8 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public int getHash()
-   {
-      if (hash == -1)
-      {
+   public int getHash() {
+      if (hash == -1) {
          Object theKey = getKey();
          hash = (theKey == null ? 0 : theKey.hashCode());
       }
@@ -330,8 +307,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public void setHash(int hash)
-   {
+   public void setHash(int hash) {
       this.hash = hash;
    }
 
@@ -341,8 +317,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public String getKey()
-   {
+   public String getKey() {
       return getTypedKey();
    }
 
@@ -352,8 +327,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public void setKey(String key)
-   {
+   public void setKey(String key) {
       setTypedKey(key);
    }
 
@@ -363,8 +337,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public EObject getValue()
-   {
+   public EObject getValue() {
       return getTypedValue();
    }
 
@@ -374,8 +347,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * 
     * @generated
     */
-   public EObject setValue(EObject value)
-   {
+   public EObject setValue(EObject value) {
       EObject oldValue = getValue();
       setTypedValue(value);
       return oldValue;
@@ -388,8 +360,7 @@ public class EContainmentMapEntryImpl extends EObjectImpl implements BasicEMap.E
     * @generated
     */
    @SuppressWarnings("unchecked")
-   public EMap<String, EObject> getEMap()
-   {
+   public EMap<String, EObject> getEMap() {
       EObject container = eContainer();
       return container == null ? null : (EMap<String, EObject>) container.eGet(eContainmentFeature());
    }

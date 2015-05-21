@@ -34,95 +34,75 @@ import org.junit.Test;
  * 
  * @author Bernd
  */
-public class ExtendableTest
-{
+public class ExtendableTest {
 
    // mock object. operations implemented by aspects
-   private class ExtendableImpl extends EObjectImpl implements Extendable
-   {
+   private class ExtendableImpl extends EObjectImpl implements Extendable {
       private EList<EObject> extensions = new BasicEList<EObject>();
 
-      public EList<EObject> getExtensions()
-      {
+      public EList<EObject> getExtensions() {
          return extensions;
       }
 
-      public <T extends EObject> T getExtension(Class<T> extensionType)
-      {
+      public <T extends EObject> T getExtension(Class<T> extensionType) {
          return null;
       }
 
-      public <T extends EObject> EList<T> getExtensions(Class<T> extensionType)
-      {
+      public <T extends EObject> EList<T> getExtensions(Class<T> extensionType) {
          return null;
       }
 
-      public <T extends EObject> void addExtension(T extension)
-      {
+      public <T extends EObject> void addExtension(T extension) {
       }
 
-      public <T extends EObject> void removeExtension(T extension)
-      {
+      public <T extends EObject> void removeExtension(T extension) {
       }
 
-      public <T extends EObject> void removeExtensions(Class<T> extentionType)
-      {
+      public <T extends EObject> void removeExtensions(Class<T> extentionType) {
       }
    }
 
    @Test
-   public void testNullArgs()
-   {
+   public void testNullArgs() {
       final Extendable extendable = new ExtendableImpl();
-      try
-      {
+      try {
          extendable.getExtension(null);
          fail();
       }
-      catch (IllegalArgumentException e)
-      {
+      catch (IllegalArgumentException e) {
       }
 
-      try
-      {
+      try {
          extendable.getExtensions(null);
          fail();
       }
-      catch (IllegalArgumentException e)
-      {
+      catch (IllegalArgumentException e) {
       }
 
-      try
-      {
+      try {
          extendable.addExtension(null);
          fail();
       }
-      catch (IllegalArgumentException e)
-      {
+      catch (IllegalArgumentException e) {
       }
 
-      try
-      {
+      try {
          extendable.removeExtension(null);
          fail();
       }
-      catch (IllegalArgumentException e)
-      {
+      catch (IllegalArgumentException e) {
       }
 
-      try
-      {
+      try {
          extendable.removeExtensions(null);
          fail();
       }
-      catch (IllegalArgumentException e)
-      {
+      catch (IllegalArgumentException e) {
       }
    }
 
    @Test
-   public void testGetExtension() throws Exception
-   {
+   public void testGetExtension() throws Exception {
       final Extendable extendable = new ExtendableImpl();
 
       Annotatable extension = extendable.getExtension(Annotatable.class);
@@ -145,8 +125,7 @@ public class ExtendableTest
    }
 
    @Test
-   public void testGetExtensions() throws Exception
-   {
+   public void testGetExtensions() throws Exception {
       final Extendable extendable = new ExtendableImpl();
 
       Annotatable mock1 = mock(Annotatable.class);

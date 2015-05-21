@@ -44,8 +44,7 @@ import org.sourcepit.common.modeling.XAnnotatable;
  * 
  * @generated
  */
-public class CommonModelingPackageImpl extends EPackageImpl implements CommonModelingPackage
-{
+public class CommonModelingPackageImpl extends EPackageImpl implements CommonModelingPackage {
    /**
     * <!-- begin-user-doc -->
     * <!-- end-user-doc -->
@@ -140,8 +139,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * @see #init()
     * @generated
     */
-   private CommonModelingPackageImpl()
-   {
+   private CommonModelingPackageImpl() {
       super(eNS_URI, CommonModelingFactory.eINSTANCE);
    }
 
@@ -166,14 +164,12 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * @see #initializePackageContents()
     * @generated
     */
-   public static CommonModelingPackage init()
-   {
+   public static CommonModelingPackage init() {
       if (isInited)
          return (CommonModelingPackage) EPackage.Registry.INSTANCE.getEPackage(CommonModelingPackage.eNS_URI);
 
       // Obtain or create and register package
-      CommonModelingPackageImpl theCommonModelingPackage = (CommonModelingPackageImpl) (EPackage.Registry.INSTANCE
-         .get(eNS_URI) instanceof CommonModelingPackageImpl
+      CommonModelingPackageImpl theCommonModelingPackage = (CommonModelingPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CommonModelingPackageImpl
          ? EPackage.Registry.INSTANCE.get(eNS_URI)
          : new CommonModelingPackageImpl());
 
@@ -200,8 +196,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getAnnotatable()
-   {
+   public EClass getAnnotatable() {
       return annotatableEClass;
    }
 
@@ -211,8 +206,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotatable_Annotations()
-   {
+   public EReference getAnnotatable_Annotations() {
       return (EReference) annotatableEClass.getEStructuralFeatures().get(0);
    }
 
@@ -222,8 +216,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getAnnotation()
-   {
+   public EClass getAnnotation() {
       return annotationEClass;
    }
 
@@ -233,8 +226,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotation_Target()
-   {
+   public EReference getAnnotation_Target() {
       return (EReference) annotationEClass.getEStructuralFeatures().get(0);
    }
 
@@ -244,8 +236,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EAttribute getAnnotation_Source()
-   {
+   public EAttribute getAnnotation_Source() {
       return (EAttribute) annotationEClass.getEStructuralFeatures().get(1);
    }
 
@@ -255,8 +246,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotation_Data()
-   {
+   public EReference getAnnotation_Data() {
       return (EReference) annotationEClass.getEStructuralFeatures().get(2);
    }
 
@@ -266,8 +256,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotation_Contents()
-   {
+   public EReference getAnnotation_Contents() {
       return (EReference) annotationEClass.getEStructuralFeatures().get(3);
    }
 
@@ -277,8 +266,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotation_References()
-   {
+   public EReference getAnnotation_References() {
       return (EReference) annotationEClass.getEStructuralFeatures().get(4);
    }
 
@@ -288,8 +276,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getAnnotation_Content()
-   {
+   public EReference getAnnotation_Content() {
       return (EReference) annotationEClass.getEStructuralFeatures().get(5);
    }
 
@@ -299,8 +286,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getEStringMapEntry()
-   {
+   public EClass getEStringMapEntry() {
       return eStringMapEntryEClass;
    }
 
@@ -310,8 +296,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EAttribute getEStringMapEntry_Key()
-   {
+   public EAttribute getEStringMapEntry_Key() {
       return (EAttribute) eStringMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
@@ -321,8 +306,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EAttribute getEStringMapEntry_Value()
-   {
+   public EAttribute getEStringMapEntry_Value() {
       return (EAttribute) eStringMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
@@ -332,8 +316,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getEContainmentMapEntry()
-   {
+   public EClass getEContainmentMapEntry() {
       return eContainmentMapEntryEClass;
    }
 
@@ -343,8 +326,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EAttribute getEContainmentMapEntry_Key()
-   {
+   public EAttribute getEContainmentMapEntry_Key() {
       return (EAttribute) eContainmentMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
@@ -354,8 +336,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getEContainmentMapEntry_Value()
-   {
+   public EReference getEContainmentMapEntry_Value() {
       return (EReference) eContainmentMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
@@ -365,8 +346,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getEReferenceMapEntry()
-   {
+   public EClass getEReferenceMapEntry() {
       return eReferenceMapEntryEClass;
    }
 
@@ -376,8 +356,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EAttribute getEReferenceMapEntry_Key()
-   {
+   public EAttribute getEReferenceMapEntry_Key() {
       return (EAttribute) eReferenceMapEntryEClass.getEStructuralFeatures().get(0);
    }
 
@@ -387,8 +366,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getEReferenceMapEntry_Value()
-   {
+   public EReference getEReferenceMapEntry_Value() {
       return (EReference) eReferenceMapEntryEClass.getEStructuralFeatures().get(1);
    }
 
@@ -398,8 +376,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getExtendable()
-   {
+   public EClass getExtendable() {
       return extendableEClass;
    }
 
@@ -409,8 +386,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EReference getExtendable_Extensions()
-   {
+   public EReference getExtendable_Extensions() {
       return (EReference) extendableEClass.getEStructuralFeatures().get(0);
    }
 
@@ -420,8 +396,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EClass getXAnnotatable()
-   {
+   public EClass getXAnnotatable() {
       return xAnnotatableEClass;
    }
 
@@ -431,8 +406,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EDataType getEFile()
-   {
+   public EDataType getEFile() {
       return eFileEDataType;
    }
 
@@ -442,8 +416,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EDataType getELocale()
-   {
+   public EDataType getELocale() {
       return eLocaleEDataType;
    }
 
@@ -453,8 +426,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public EDataType getEURL()
-   {
+   public EDataType getEURL() {
       return eurlEDataType;
    }
 
@@ -464,8 +436,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public CommonModelingFactory getCommonModelingFactory()
-   {
+   public CommonModelingFactory getCommonModelingFactory() {
       return (CommonModelingFactory) getEFactoryInstance();
    }
 
@@ -485,8 +456,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public void createPackageContents()
-   {
+   public void createPackageContents() {
       if (isCreated)
          return;
       isCreated = true;
@@ -542,8 +512,7 @@ public class CommonModelingPackageImpl extends EPackageImpl implements CommonMod
     * 
     * @generated
     */
-   public void initializePackageContents()
-   {
+   public void initializePackageContents() {
       if (isInitialized)
          return;
       isInitialized = true;

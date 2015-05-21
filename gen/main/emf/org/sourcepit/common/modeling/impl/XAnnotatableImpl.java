@@ -46,8 +46,7 @@ import org.sourcepit.common.modeling.XAnnotatable;
  * 
  * @generated
  */
-public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatable
-{
+public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatable {
    /**
     * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference list.
     * <!-- begin-user-doc -->
@@ -76,8 +75,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   protected XAnnotatableImpl()
-   {
+   protected XAnnotatableImpl() {
       super();
    }
 
@@ -88,8 +86,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   protected EClass eStaticClass()
-   {
+   protected EClass eStaticClass() {
       return CommonModelingPackage.Literals.XANNOTATABLE;
    }
 
@@ -99,10 +96,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public EList<EObject> getExtensions()
-   {
-      if (extensions == null)
-      {
+   public EList<EObject> getExtensions() {
+      if (extensions == null) {
          extensions = new EObjectContainmentEList<EObject>(EObject.class, this,
             CommonModelingPackage.XANNOTATABLE__EXTENSIONS);
       }
@@ -115,10 +110,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public EList<Annotation> getAnnotations()
-   {
-      if (annotations == null)
-      {
+   public EList<Annotation> getAnnotations() {
+      if (annotations == null) {
          annotations = new EObjectContainmentWithInverseEList<Annotation>(Annotation.class, this,
             CommonModelingPackage.XANNOTATABLE__ANNOTATIONS, CommonModelingPackage.ANNOTATION__TARGET);
       }
@@ -131,8 +124,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public Annotation getAnnotation(String source)
-   {
+   public Annotation getAnnotation(String source) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -144,8 +136,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public Annotation getAnnotation(String source, boolean createOnDemand)
-   {
+   public Annotation getAnnotation(String source, boolean createOnDemand) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -157,8 +148,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public String getAnnotationData(String source, String key)
-   {
+   public String getAnnotationData(String source, String key) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -170,8 +160,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public String setAnnotationData(String source, String key, String value)
-   {
+   public String setAnnotationData(String source, String key, String value) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -183,8 +172,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public <T extends EObject> T getExtension(Class<T> extensionType)
-   {
+   public <T extends EObject> T getExtension(Class<T> extensionType) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -196,8 +184,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public <T extends EObject> EList<T> getExtensions(Class<T> extensionType)
-   {
+   public <T extends EObject> EList<T> getExtensions(Class<T> extensionType) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -209,8 +196,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public <T extends EObject> void addExtension(T extension)
-   {
+   public <T extends EObject> void addExtension(T extension) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -222,8 +208,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public <T extends EObject> void removeExtension(T extension)
-   {
+   public <T extends EObject> void removeExtension(T extension) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -235,8 +220,7 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * 
     * @generated
     */
-   public <T extends EObject> void removeExtensions(Class<T> extentionType)
-   {
+   public <T extends EObject> void removeExtensions(Class<T> extentionType) {
       // TODO: implement this method
       // Ensure that you remove @generated or mark it @generated NOT
       throw new UnsupportedOperationException();
@@ -250,10 +234,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     */
    @SuppressWarnings("unchecked")
    @Override
-   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-   {
-      switch (featureID)
-      {
+   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__ANNOTATIONS :
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getAnnotations()).basicAdd(otherEnd, msgs);
       }
@@ -267,10 +249,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-   {
-      switch (featureID)
-      {
+   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__EXTENSIONS :
             return ((InternalEList<?>) getExtensions()).basicRemove(otherEnd, msgs);
          case CommonModelingPackage.XANNOTATABLE__ANNOTATIONS :
@@ -286,10 +266,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public Object eGet(int featureID, boolean resolve, boolean coreType)
-   {
-      switch (featureID)
-      {
+   public Object eGet(int featureID, boolean resolve, boolean coreType) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__EXTENSIONS :
             return getExtensions();
          case CommonModelingPackage.XANNOTATABLE__ANNOTATIONS :
@@ -306,10 +284,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     */
    @SuppressWarnings("unchecked")
    @Override
-   public void eSet(int featureID, Object newValue)
-   {
-      switch (featureID)
-      {
+   public void eSet(int featureID, Object newValue) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__EXTENSIONS :
             getExtensions().clear();
             getExtensions().addAll((Collection<? extends EObject>) newValue);
@@ -329,10 +305,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public void eUnset(int featureID)
-   {
-      switch (featureID)
-      {
+   public void eUnset(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__EXTENSIONS :
             getExtensions().clear();
             return;
@@ -350,10 +324,8 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public boolean eIsSet(int featureID)
-   {
-      switch (featureID)
-      {
+   public boolean eIsSet(int featureID) {
+      switch (featureID) {
          case CommonModelingPackage.XANNOTATABLE__EXTENSIONS :
             return extensions != null && !extensions.isEmpty();
          case CommonModelingPackage.XANNOTATABLE__ANNOTATIONS :
@@ -369,12 +341,9 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-   {
-      if (baseClass == Annotatable.class)
-      {
-         switch (derivedFeatureID)
-         {
+   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+      if (baseClass == Annotatable.class) {
+         switch (derivedFeatureID) {
             case CommonModelingPackage.XANNOTATABLE__ANNOTATIONS :
                return CommonModelingPackage.ANNOTATABLE__ANNOTATIONS;
             default :
@@ -391,12 +360,9 @@ public abstract class XAnnotatableImpl extends EObjectImpl implements XAnnotatab
     * @generated
     */
    @Override
-   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-   {
-      if (baseClass == Annotatable.class)
-      {
-         switch (baseFeatureID)
-         {
+   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+      if (baseClass == Annotatable.class) {
+         switch (baseFeatureID) {
             case CommonModelingPackage.ANNOTATABLE__ANNOTATIONS :
                return CommonModelingPackage.XANNOTATABLE__ANNOTATIONS;
             default :

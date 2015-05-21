@@ -35,8 +35,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Annotatable extends EObject
-{
+public interface Annotatable extends EObject {
    /**
     * Returns the value of the '<em><b>Annotations</b></em>' containment reference list.
     * The list contents are of type {@link org.sourcepit.common.modeling.Annotation}.

@@ -27,8 +27,7 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.sourcepit.common.modeling.CommonModelingPackage
  * @generated
  */
-public interface CommonModelingFactory extends EFactory
-{
+public interface CommonModelingFactory extends EFactory {
    /**
     * The singleton instance of the factory.
     * <!-- begin-user-doc -->

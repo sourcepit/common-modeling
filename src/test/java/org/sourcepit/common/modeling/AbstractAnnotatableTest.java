@@ -39,29 +39,23 @@ import org.junit.Test;
 /**
  * @author Bernd
  */
-public abstract class AbstractAnnotatableTest
-{
+public abstract class AbstractAnnotatableTest {
    @Test
-   public void testGetAnnotation() throws Exception
-   {
+   public void testGetAnnotation() throws Exception {
       int count = 0;
 
       List<EClass> annotateableTypes = getAnnotateableTypes();
-      for (EClass eClass : annotateableTypes)
-      {
+      for (EClass eClass : annotateableTypes) {
          count++;
 
          Annotatable annotateable = createAnnotateable(eClass);
-         try
-         {
+         try {
             annotateable.getAnnotation(null);
             fail("Must throw IllegalArgumentException");
          }
-         catch (IllegalArgumentException e)
-         {
+         catch (IllegalArgumentException e) {
          }
-         catch (UnsupportedOperationException e)
-         {
+         catch (UnsupportedOperationException e) {
             fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
          }
 
@@ -97,26 +91,21 @@ public abstract class AbstractAnnotatableTest
    }
 
    @Test
-   public void testGetAnnotationAndCreateOnDemand() throws Exception
-   {
+   public void testGetAnnotationAndCreateOnDemand() throws Exception {
       int count = 0;
 
       List<EClass> annotateableTypes = getAnnotateableTypes();
-      for (EClass eClass : annotateableTypes)
-      {
+      for (EClass eClass : annotateableTypes) {
          count++;
 
          Annotatable annotateable = createAnnotateable(eClass);
-         try
-         {
+         try {
             annotateable.getAnnotation(null, true);
             fail("Must throw IllegalArgumentException");
          }
-         catch (IllegalArgumentException e)
-         {
+         catch (IllegalArgumentException e) {
          }
-         catch (UnsupportedOperationException e)
-         {
+         catch (UnsupportedOperationException e) {
             fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
          }
 
@@ -152,44 +141,36 @@ public abstract class AbstractAnnotatableTest
       assertThat(count, IsNot.not(0));
    }
 
-   private Annotatable createAnnotateable(EClass eClass)
-   {
+   private Annotatable createAnnotateable(EClass eClass) {
       Annotatable annotateable = (Annotatable) eClass.getEPackage().getEFactoryInstance().create(eClass);
       assertNotNull(annotateable);
       return annotateable;
    }
 
    @Test
-   public void testGetAnnotationData() throws Exception
-   {
+   public void testGetAnnotationData() throws Exception {
       int count = 0;
 
       List<EClass> annotateableTypes = getAnnotateableTypes();
-      for (EClass eClass : annotateableTypes)
-      {
+      for (EClass eClass : annotateableTypes) {
          count++;
 
          Annotatable annotateable = createAnnotateable(eClass);
-         try
-         {
+         try {
             annotateable.getAnnotationData(null, null);
             fail("Must throw IllegalArgumentException");
          }
-         catch (IllegalArgumentException e)
-         {
+         catch (IllegalArgumentException e) {
          }
-         catch (UnsupportedOperationException e)
-         {
+         catch (UnsupportedOperationException e) {
             fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
          }
 
-         try
-         {
+         try {
             annotateable.getAnnotationData("source", null);
             fail("Must throw IllegalArgumentException");
          }
-         catch (IllegalArgumentException e)
-         {
+         catch (IllegalArgumentException e) {
          }
 
          assertNull(annotateable.getAnnotationData("source", "key"));
@@ -207,22 +188,17 @@ public abstract class AbstractAnnotatableTest
       assertThat(count, IsNot.not(0));
    }
 
-   public void testSetAnnptationData() throws Exception
-   {
+   public void testSetAnnptationData() throws Exception {
       List<EClass> annotateableTypes = getAnnotateableTypes();
-      for (EClass eClass : annotateableTypes)
-      {
+      for (EClass eClass : annotateableTypes) {
          Annotatable annotateable = createAnnotateable(eClass);
-         try
-         {
+         try {
             annotateable.setAnnotationData(null, null, null);
             fail("Must throw IllegalArgumentException");
          }
-         catch (IllegalArgumentException e)
-         {
+         catch (IllegalArgumentException e) {
          }
-         catch (UnsupportedOperationException e)
-         {
+         catch (UnsupportedOperationException e) {
             fail("Operation getAnnotation(source) not supported by type " + annotateable.getClass().getSimpleName());
          }
 
@@ -231,17 +207,13 @@ public abstract class AbstractAnnotatableTest
       }
    }
 
-   private List<EClass> getAnnotateableTypes()
-   {
+   private List<EClass> getAnnotateableTypes() {
       EClass annotateableType = CommonModelingPackage.eINSTANCE.getAnnotatable();
       List<EClass> annotateableTypes = new ArrayList<EClass>();
-      for (EClassifier eClassifier : getAllEClassifiers())
-      {
-         if (eClassifier instanceof EClass)
-         {
+      for (EClassifier eClassifier : getAllEClassifiers()) {
+         if (eClassifier instanceof EClass) {
             EClass eClass = (EClass) eClassifier;
-            if (!eClass.isAbstract() && !eClass.isInterface() && annotateableType.isSuperTypeOf(eClass))
-            {
+            if (!eClass.isAbstract() && !eClass.isInterface() && annotateableType.isSuperTypeOf(eClass)) {
                annotateableTypes.add(eClass);
             }
          }
@@ -250,13 +222,11 @@ public abstract class AbstractAnnotatableTest
       return annotateableTypes;
    }
 
-   private EList<EClassifier> getAllEClassifiers()
-   {
+   private EList<EClassifier> getAllEClassifiers() {
       List<EPackage> ePackages = new ArrayList<EPackage>();
       addEPackages(ePackages);
       EList<EClassifier> classifiers = new BasicEList<EClassifier>();
-      for (EPackage ePackage : ePackages)
-      {
+      for (EPackage ePackage : ePackages) {
          classifiers.addAll(ePackage.getEClassifiers());
       }
       return classifiers;
